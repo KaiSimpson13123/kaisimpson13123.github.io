@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Kai S</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Landing Page -->
+  <header class="landing">
+    <div class="intro">
+      <h1 class="effect">Hi, I'm <span>Kai.</span></h1>
+      <hr>
+      <br>
+      <p class="effect1">A Passionate Developer Specializing in Web Technologies</p>
+      <br>
+      <br>
+      <a href="#projects" class="scroll-btn">View Projects</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <br>
+    <div class="bio">
+      <p>I specialize in HTML, CSS, JS, TypeScript and Python I create beautiful, high-performance web apps and constantly strive for innovation.</p>
+    </div>
+    <div class="skills">
+      <h3>Skills</h3>
+      <br>
+      <div class="skill-grid">
+        <div class="skill htmlskill">
+          <i class="fab fa-html5"></i> HTML
+        </div>
+        <div class="skill cssskill">
+          <i class="fab fa-css3-alt"></i> CSS
+        </div>
+        <div class="skill jsskill">
+          <i class="fab fa-js"></i> JavaScript
+        </div>
+        <div class="skill nodeskill">
+          <i class="fab fa-node-js"></i> Node
+        </div>
+        <div class="skill pythonskill">
+          <i class="fab fa-python"></i> Python
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <br>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="SpotLog.png" alt="Project 1">
+        <h3>Spot Log - Free Plane Spotter's Log</h3>
+        <p>Technologies: HTML, CSS, JS</p>
+        <a href="https://github.com/KaiSimpson13123/SpotLog" class="btn"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="Ozflight.png" alt="Project 2">
+        <h3>OzFlight - VATSIM & Flightradar Combined</h3>
+        <p>Technologies: TypeScript, CSS</p>
+        <a href="https://ozflight.live/" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required style="resize: none;"></textarea>
+      <br>  
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Kai Simpson. All rights reserved.</p>
+  </footer>
+</body>
+</html>

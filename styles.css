@@ -1,0 +1,249 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #00eaff;
+  }
+  
+  /* Dynamic Background */
+  header {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 25, 0.8)), url('path/to/your/dynamic-background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Landing Page */
+  .landing .intro {
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .landing .intro h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .landing .intro h1 span {
+    color: #00eaff;
+  }
+  
+  .landing .intro p {
+    font-size: 1.5rem;
+  }
+  
+  .scroll-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: #00eaff;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+  }
+  
+  .scroll-btn:hover {
+    background-color: #009abb;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 5rem 1.5rem;
+    text-align: center;
+    background-color: #1c1c1c;
+    border-top: 3px dashed white;
+    border-bottom: 3px dashed white;
+  }
+  
+  .about .bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .bio-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 1.5rem;
+  }
+  
+  .skills .skill-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .skill {
+    background-color: #282828;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .skill i {
+    margin-right: 0.5rem;
+    color: white; /* Icon color */
+  }
+
+  .htmlskill:hover {
+    background-color: #FF5733;
+  }
+
+  .cssskill:hover {
+    background-color: #327df0;
+  }
+
+  .jsskill:hover {
+    background-color: #F0DB4F;
+  }
+
+  .nodeskill:hover {
+    background-color: #84CE24;
+  }
+
+  .pythonskill:hover {
+    background-color: #3673A5;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 5rem 1.5rem;
+    background-color: #121212;
+    border-bottom: 3px dashed white;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: #1c1c1c;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 6px solid white;
+  }
+  
+  .project-card img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #00eaff;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn i {
+    margin-right: 0.5rem; /* Space between icon and text */
+  }
+  
+  .btn:hover {
+    background-color: #009abb;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 5rem 1.5rem;
+    background-color: #1c1c1c;
+    text-align: center;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 80%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #282828;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact form button {
+    padding: 1rem 2rem;
+    background-color: #00eaff;
+    color: #121212;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .effect {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+  }
+
+  footer {
+    padding: 2rem 0;
+    background-color: #121212;
+    text-align: center;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }

@@ -132,6 +132,10 @@
   .pythonskill:hover {
     background-color: #3673A5;
   }
+
+  .javaskill:hover {
+    background-color: #F0931C;
+  }
   
   /* Projects Section */
   .projects {

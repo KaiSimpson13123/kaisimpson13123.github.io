@@ -136,6 +136,14 @@
   .javaskill:hover {
     background-color: #F0931C;
   }
+
+  .reactskill:hover {
+    background-color: #5ED3F3;
+  }
+
+  .dockerskill:hover {
+    background-color: #1C60E6;
+  }
   
   /* Projects Section */
   .projects {

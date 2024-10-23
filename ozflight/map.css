@@ -1,0 +1,110 @@
+body {
+	overflow: hidden;
+	height: 100%;
+	margin: 0;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+}
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2147483638;
+    font-size: 30px;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+.help-button:hover {
+    border-radius: 10px;
+    background-color: #0056b3;
+}
+
+.help-button:focus {
+    outline: none;
+}
+
+.help-button2 {
+    position: fixed;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2147483638;
+    font-size: 30px;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+.help-button2:hover {
+    border-radius: 10px;
+    background-color: #0056b3;
+}
+
+
+.rotated-marker {
+            transform-origin: center;
+            transition: transform 0.5s ease;
+        }
+
+.atis-btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .atis-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .atis-btn:active {
+        background-color: #003f7f;
+    }
+
+
+.Legend {
+	z-index: 1000;
+	position: fixed;
+	color: white;
+	left: 10px;
+	bottom: 2px;
+}
+
+.Legend-VATSIM {
+	width: 16px;
+	height: 16px;
+}
+
+.Legend-REAL {
+	width: 16px;
+	height: 16px;
+}

@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: #121212;
+    background-color: #FFFFF0;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -20,7 +20,7 @@
   
   h1, h2, h3 {
     text-align: center;
-    color: #fff;
+    color: #000000;
   }
   
   a {
@@ -31,7 +31,10 @@
   /* Dynamic Background */
   header {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 25, 0.8)), url('path/to/your/dynamic-background.jpg') no-repeat center center/cover;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,9 +77,9 @@
   .about {
     padding: 5rem 1.5rem;
     text-align: center;
-    background-color: #1c1c1c;
-    border-top: 3px dashed white;
-    border-bottom: 3px dashed white;
+    background-color: #F8F8FF;
+    border-top: 3px dashed rgb(0, 0, 0);
+    border-bottom: 3px dashed rgb(0, 0, 0);
   }
   
   .about .bio {
@@ -108,10 +111,9 @@
     align-items: center;
     text-align: center;
     width: 200px;
-  }
-
-  .skill:hover {
-    border: 3px solid white;
+    height: 60px;
+    max-height: 60px;
+    box-sizing: border-box;
   }
   
   .skill i {
@@ -119,14 +121,21 @@
     color: white; /* Icon color */
     align-items: center;
     text-align: center;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+    border: 3px solid #ffffff00;
   }
 
   .htmlskill:hover {
     background-color: #FF5733;
+    box-sizing: border-box;
   }
 
   .cssskill:hover {
     background-color: #327df0;
+    box-sizing: border-box;
   }
 
   .jsskill:hover {
@@ -156,8 +165,8 @@
   /* Projects Section */
   .projects {
     padding: 5rem 1.5rem;
-    background-color: #121212;
-    border-bottom: 3px dashed white;
+    background-color: #F5F5F5;
+    border-bottom: 3px dashed rgb(0, 0, 0);
   }
   
   .project-grid {
@@ -167,12 +176,13 @@
   }
   
   .project-card {
-    background-color: #1c1c1c;
+    background-color: #F8F8FF;
+    color: rgb(0, 0, 0);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s;
-    border: 6px solid white;
+    border: 6px solid rgb(0, 0, 0);
   }
   
   .project-card img {
@@ -208,7 +218,7 @@
   /* Contact Section */
   .contact {
     padding: 5rem 1.5rem;
-    background-color: #1c1c1c;
+    background-color: #e3e3e3;
     text-align: center;
   }
   
@@ -233,7 +243,7 @@
   
   .effect {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
@@ -265,5 +275,5 @@
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: rgb(255, 255, 255); }
+    50% { border-color: rgb(0, 0, 0); }
   }

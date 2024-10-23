@@ -1,105 +1,333 @@
+<!-- HELLO
+-
+DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
+Created by Anil Seervi.
+-
+GitHub repo: https://github.com/AnilSeervi/DevFolio
+README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
+-
+Have fun creating your portfolio on this template!!! -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Kai S</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <!-- Landing Page -->
-  <header class="landing">
-    <div class="intro">
-      <h1 class="effect">Hi, I'm <span style="text-shadow: 1px 1px 0px black;">Kai.</span></h1>
-      <hr>
-      <br>
-      <p class="effect1" style="color: black;">A Passionate Developer Specializing in Web Technologies</p>
-      <br>
-      <br>
-      <a href="#projects" class="scroll-btn">View Projects</a>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <br>
-    <div class="bio">
-      <p style="color: black;">I specialise in the languages below. I create beautiful, high-performance web apps and constantly strive for innovation. I do much more then web development, but below are my favourites.</p>
+    <!-- Title: add your Portfolio websites's title here -->
+    <title>Kai | Developer</title>
+
+    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="kai, Kai Simpson, javascript" />
+
+    <!-- Improve your SEO by adding a small descrption of you -->
+    <meta name="description" content="[Your name here] | Developer" />
+
+    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
+    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+
+    <!-- Add your primary-theme color for the value of content -->
+    <meta name="theme-color" content="#36d1dc" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <!-- Fill content with the URL of this portfolio you'll host -->
+    <meta property="og:url" content="https://devfolio.js.org/" />
+    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
+    <meta property="og:title" content="[Your name here] | Developer" />
+    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
+    <meta property="og:description" content="Made using DevFolio Template" />
+    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
+      so that a thumbnail image of your portfolio is shown while shared on other platform -->
+    <meta
+      property="og:image"
+      content="https://devfolio.js.org/assets/devfolio.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Again fill content attr with the URL of this portfolio you'll host -->
+    <meta property="twitter:url" content="https://devfolio.js.org" />
+    <!-- Recommended to use the same text used within <title> element -->
+    <meta property="twitter:title" content="[Your name here] | Developer" />
+    <!-- short description that shows up while your portfolio is shared -->
+    <meta
+      property="twitter:description"
+      content="Made using DevFolio Template"
+    />
+    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
+    <meta
+      property="twitter:image"
+      content="https://anilseervi.vercel.app/assets/devfolio.png"
+    />
+
+    <!-- link tags -->
+    <link rel="preload" as="style" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FontAwesome Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./javascript/scrollreveal.min.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./javascript/scrollveal.js"
+    ></script>
+
+    <!-- Remove Google Analytics once you have your portfolio website set-up -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122228201-4")
+    </script>
+    <!-- End of Google Analytics -->
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div id="hero">
+      <section class="container">
+        <h1 class="hero-title">
+          Hi, my name is <span class="text-color-main name">Kai</span>
+          <br />
+          <span style="color: gray;">Web Developer</span>
+        </h1>
+        <p class="hero-cta">
+          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+        </p>
+      </section>
+      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+        <div class="scroll-down"></div
+      ></a>
     </div>
-    <div class="skills">
-      <h3>Skills</h3>
-      <br>
-      <div class="skill-grid">
-        <div class="skill htmlskill">
-          <i class="fab fa-html5"></i> HTML
-        </div>
-        <div class="skill cssskill">
-          <i class="fab fa-css3-alt"></i> CSS
-        </div>
-        <div class="skill jsskill">
-          <i class="fab fa-js"></i> JavaScript
-        </div>
-        <div class="skill nodeskill">
-          <i class="fab fa-node-js"></i> Node
+    <!-- /END Hero Section -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row about-wrapper">
+          <div class="about-wrapper__image">
+            <img
+              class="img-fluid"
+              src="./assets/747.png"
+              alt="Profile Image"
+              width="450"
+              height="350"
+            />
+          </div>
+          <div class="about-wrapper__info">
+            <p class="about-wrapper__info-text">
+              I love developing websites and apps and I am eager to share my skills with others. I also have a strong passion for aviation
+              and I have made many projects surrounding aviation.
+            </p>
+            <p class="about-wrapper__info-text">
+              Some of the languages/tools I love are below :)
+            </p>
+            <span class="about-wrapper__cta">
+              <br>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fab fa-html5"></i> HTML</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fab fa-css3-alt"></i> CSS</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fab fa-js"></i> JavaScript</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fab fa-node-js"></i> Node</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fab fa-python"></i> Python</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fa-brands fa-java"></i> Java</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fa-brands fa-docker"></i> Docker</a>
+              <a href="#" class="cta-btn cta-btn--resume" style="cursor: default;"><i class="fa-brands fa-react"></i> React</a>
+
+            </span>
+          </div>
         </div>
       </div>
-      <br>
-      <div class="skill-grid">
-        <div class="skill pythonskill">
-          <i class="fab fa-python"></i> Python
-        </div>
-        <div class="skill javaskill">
-          <i class="fa-brands fa-java"></i> Java
-        </div>
-        <div class="skill reactskill">
-          <i class="fa-brands fa-react"></i> React
-        </div>
-        <div class="skill dockerskill">
-          <i class="fa-brands fa-docker"></i> Docker
+    </section>
+    <!-- /END About Section -->
+
+    <!--Projects Section-->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">OzFlight</h3>
+              <p class="project-wrapper__text-info">
+                OzFlight is a flight tracker that intergrates both VATSIM flights and
+                real flights in Australia. It gives VATSIM pilots the realistic experience
+                they're looking for.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="http://35.244.89.247"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/ozflight.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Spot Log</h3>
+              <p class="project-wrapper__text-info">
+                Spot Log is a free Plane Spotter's logging app I made where spotters can input
+                photos and add details about them and then search for their photos and it is a great
+                way for spotters to organise their photos.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="https://github.com/KaiSimpson13123/SpotLog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                <a href="#" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/spotlog.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <p class="project-wrapper__text-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
+                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
+                sint saepe nostrum! Enim, perferendis.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+                <a href="#" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/project.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- End Projects Section -->
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
-    <br>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="SpotLog.png" alt="Project 1">
-        <h3>Spot Log - Free Plane Spotter's Log</h3>
-        <p>Technologies: HTML, CSS, JS</p>
-        <a href="https://github.com/KaiSimpson13123/SpotLog" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper">
+          <p class="contact-wrapper__text">Need help? Want something made? Contact me!</p>
+          <a href="mailto:kaiysimpson@gmail.com" class="cta-btn cta-btn--resume">Contact</a>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="Ozflight.png" alt="Project 2">
-        <h3>OzFlight - VATSIM & Flightradar Combined</h3>
-        <p>Technologies: HTML, CSS, TypeScript</p>
-        <a href="https://ozflight.live/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+    </section>
+    <!-- END Contact Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <a href="#hero" class="back-to-top" aria-label="go back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="https://github.com/KaiSimpson13123/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="github"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <hr />
+        <p class="footer__text">
+          &copy; <span id="year"></span> - Made By
+          <a
+            href="https://github.com/AnilSeervi"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Kai Simpson</a
+          >. <br />
+        </p>
       </div>
-      <!-- Add more project cards as needed -->
-    </div>
-  </section>
+    </footer>
+    <!-- END Footer Section -->
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Wanting to get in touch? Want something made? Contact me here.</h2>
-    <form action="#" method="post">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required style="resize: none;"></textarea>
-      <br>  
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Kai Simpson. All rights reserved.</p>
-  </footer>
-</body>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear()
+    </script>
+    <script src="./javascript/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="./javascript/valtilt.js"></script>
+  </body>
 </html>

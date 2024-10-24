@@ -6,3 +6,9 @@ VanillaTilt.init(tilt, {
   glare: true,
   "max-glare": 0.3,
 });
+
+
+function copyEmail() {
+  navigator.clipboard.writeText("kaiysimpson@gmail.com");
+  swal("Email Copied", "Email Has Been Copied To Your Clipboard!", "success");
+}

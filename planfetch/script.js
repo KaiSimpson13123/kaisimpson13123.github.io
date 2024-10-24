@@ -37,7 +37,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
                 <h3><strong>Callsign:</strong> ${flight.callsign}</h3>
                 <h4>Flight Plan ID: ${flight.id}</h4>
                 <p><strong>Aircraft:</strong> ${flight.aircraft}</p>
-                <p><strong>Departure:</strong> ${flight.dep} | Arrival: ${flight.arr}</p>
+                <p><strong>Departure:</strong> ${flight.dep} | <strong>Arrival:</strong> ${flight.arr}</p>
                 <p><strong>Filed Time (z):</strong> ${new Date(flight.filed).toLocaleString()}</p>
                 <p><strong>Route:</strong> ${flight.route}</p>
                 <p><strong>Remarks:</strong> ${flight.rmks}</p>

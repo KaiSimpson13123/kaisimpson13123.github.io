@@ -9,7 +9,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
     try {
         console.log(`Fetching flight plans for CID: ${cid}`);
-        const response = await fetch(`https://api.vatsim.net/v2/members/${cid}/flightplans`);
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.vatsim.net/v2/members/${cid}/flightplans`);
 
         console.log(`Response status: ${response.status}`);
 

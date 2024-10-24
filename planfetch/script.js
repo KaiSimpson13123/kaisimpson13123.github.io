@@ -8,7 +8,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch(`https://api.vatsim.net/v2/members/${cid}/flightplans`);
+        const response = await fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://api.vatsim.net/v2/members/${cid}/flightplans`);
 
         if (!response.ok) {
             if (response.status === 404) {
@@ -32,8 +32,8 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             flightPlanDiv.className = 'flight-plan';
 
             flightPlanDiv.innerHTML = `
-                <h3>Flight Plan ID: ${flight.id}</h3>
-                <p><strong>Callsign:</strong> ${flight.callsign}</p>
+                <h3><strong>Callsign:</strong> ${flight.callsign}</h3>
+                <h4>Flight Plan ID: ${flight.id}</h4>
                 <p><strong>Aircraft:</strong> ${flight.aircraft}</p>
                 <p><strong>Departure:</strong> ${flight.dep} | Arrival: ${flight.arr}</p>
                 <p><strong>Filed Time:</strong> ${new Date(flight.filed).toLocaleString()}</p>

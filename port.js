@@ -1,4 +1,4 @@
-let isDown = 1;
+let isDown = 0;
 
 window.addEventListener('load', (event) => {
     if (isDown === 1) {

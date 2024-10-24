@@ -1,7 +1,6 @@
 document.getElementById('searchBtn').addEventListener('click', async () => {
     const cid = document.getElementById('cid').value;
     const flightPlansDiv = document.getElementById('flightPlans');
-    const sorttext = document.getElementById('sort');
 
     if (!cid) {
         flightPlansDiv.innerHTML = '<p>Please enter a valid CID.</p>';
@@ -22,7 +21,6 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
         const data = await response.json();
         flightPlansDiv.innerHTML = ''; // Clear previous results
-        sorttext.innerHTML = 'Sorts the most recent entries at the top.';
 
         if (data.length === 0) {
             flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
@@ -33,14 +31,18 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             const flightPlanDiv = document.createElement('div');
             flightPlanDiv.className = 'flight-plan';
 
+            // Calculate the time ago
+            const filedTime = new Date(flight.filed);
+            const timeAgo = getTimeAgo(filedTime);
+
             flightPlanDiv.innerHTML = `
                 <h3><strong>Callsign:</strong> ${flight.callsign}</h3>
-                <h4>Flight Plan ID: ${flight.id}</h4>
+                <p>Flight Plan ID: ${flight.id}</p>
                 <p><strong>Aircraft:</strong> ${flight.aircraft}</p>
-                <p><strong>Departure:</strong> ${flight.dep} | <strong>Arrival:</strong> ${flight.arr}</p>
-                <p><strong>Filed Time (z):</strong> ${new Date(flight.filed).toLocaleString()}</p>
+                <p><strong>Departure:</strong> ${flight.dep} | Arrival: ${flight.arr}</p>
                 <p><strong>Route:</strong> ${flight.route}</p>
                 <p><strong>Remarks:</strong> ${flight.rmks}</p>
+                <p style="text-align: right;"><strong>Filed:</strong> ${timeAgo} ago</p>
             `;
             flightPlansDiv.appendChild(flightPlanDiv);
         });
@@ -48,5 +50,18 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         console.error('Error fetching flight plans:', error);
         flightPlansDiv.innerHTML = '<p>Error fetching flight plans. Please try again later.</p>';
     }
-
 });
+
+// Function to calculate time ago
+function getTimeAgo(filedDate) {
+    const now = new Date();
+    const diffInMilliseconds = now - filedDate;
+
+    const seconds = Math.floor(diffInMilliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    const formattedTime = `${days}d:${hours % 24}h:${minutes % 60}m`;
+    return formattedTime;
+}

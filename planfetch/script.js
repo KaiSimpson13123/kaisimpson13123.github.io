@@ -12,8 +12,9 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
         if (!response.ok) {
             if (response.status === 404) {
-                flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
+                swal("ERROR", "No Flight Plans Filed For This CID!", "error");
             } else {
+                swal("ERROR", `Error: ${response.status} ${response.statusText}`, "error");
                 flightPlansDiv.innerHTML = `<p>Error: ${response.status} ${response.statusText}</p>`;
             }
             return;
@@ -24,6 +25,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
         if (data.length === 0) {
             flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
+            swal("ERROR", "No Flight Plans Filed For This CID!", "error");
             return;
         }
 
@@ -50,7 +52,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         });
     } catch (error) {
         console.error('Error fetching flight plans:', error);
-        flightPlansDiv.innerHTML = '<p>Error fetching flight plans. Please try again later.</p>';
+        swal("ERROR", "Error Fetching Flight Plans, Try Again Later.", "error");
     }
 });
 

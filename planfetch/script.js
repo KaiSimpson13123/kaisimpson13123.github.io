@@ -44,7 +44,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
                 <p><strong>Departure:</strong> ${flight.dep} | Arrival: ${flight.arr}</p>
                 <p><strong>Route:</strong> ${flight.route}</p>
                 <p><strong>Remarks:</strong> ${flight.rmks}</p>
-                <a href="javascript:swal('Date Filed', '${filedTime}', 'info');" style="text-decoration: none;color: white;"><p style="text-align: right;"><strong>Filed:</strong> ${timeAgo} ago</p></a>
+                <a href="javascript:swal('Date Filed', '${filedTime}', 'info');" style="color: white;"><p style="text-align: right;"><strong>Filed:</strong> ${timeAgo} ago</p></a>
             `;
 
             flightPlansDiv.appendChild(flightPlanDiv);

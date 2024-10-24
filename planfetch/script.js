@@ -1,6 +1,7 @@
 document.getElementById('searchBtn').addEventListener('click', async () => {
     const cid = document.getElementById('cid').value;
     const flightPlansDiv = document.getElementById('flightPlans');
+    const sorttext = document.getElementById('sort');
 
     if (!cid) {
         flightPlansDiv.innerHTML = '<p>Please enter a valid CID.</p>';
@@ -21,6 +22,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
         const data = await response.json();
         flightPlansDiv.innerHTML = ''; // Clear previous results
+        sorttext.innerHTML = 'Sorts the most recent entries at the top.';
 
         if (data.length === 0) {
             flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
@@ -46,4 +48,5 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         console.error('Error fetching flight plans:', error);
         flightPlansDiv.innerHTML = '<p>Error fetching flight plans. Please try again later.</p>';
     }
+
 });

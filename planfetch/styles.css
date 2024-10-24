@@ -49,3 +49,11 @@ button:hover {
 .flight-plan p {
     margin: 5px 0;
 }
+
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}

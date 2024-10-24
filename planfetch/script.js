@@ -10,19 +10,9 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
     try {
         const response = await fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://api.vatsim.net/v2/members/${cid}/flightplans`);
-        const flighttimeresponse = await fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://api.vatsim.net/v2/members/:member_id/stats`)
 
         if (!response.ok) {
             if (response.status === 404) {
-                flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
-            } else {
-                flightPlansDiv.innerHTML = `<p>Error: ${response.status} ${response.statusText}</p>`;
-            }
-            return;
-        }
-
-        if (!flighttimeresponse.ok) {
-            if (flighttimeresponse.status === 404) {
                 flightPlansDiv.innerHTML = '<p>No flight plans found for this CID.</p>';
             } else {
                 flightPlansDiv.innerHTML = `<p>Error: ${response.status} ${response.statusText}</p>`;

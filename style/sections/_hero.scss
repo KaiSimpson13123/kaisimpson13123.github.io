@@ -71,7 +71,7 @@
 }
 .scroll-down-link {
   position: absolute;
-  left: 50%;
+  left: 90%;
   bottom: 20px;
   transform: translateX(-50%);
 }
@@ -88,7 +88,7 @@
     content: "";
     position: absolute;
     top: 20%;
-    left: 50%;
+    right: 30px;
     border: 2px solid $secondary-color;
     transform: translate(-50%, -100%) rotate(45deg);
     border-top: none;

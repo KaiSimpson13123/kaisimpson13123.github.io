@@ -1,1852 +1,6516 @@
-const eetest = 'yes';
-const eetest1 = 'yes';
-const eetest2 = 'yes';
-const eetest3 = 'yes';
-const eetest4 = 'yes';
-const eetest5 = 'yes';
-const eetest6 = 'yes';
-const eetest7 = 'yes';
-const eetest8 = 'yes';
-const eetest9 = 'yes';
-const eetest10 = 'yes';
-const eetest11 = 'yes';
-const eetest12 = 'yes';
-const eetest13 = 'yes';
-const eetest14 = 'yes';
-const eetest15 = 'yes';
-const eetest16 = 'yes';
-const eetest17 = 'yes';
-const eetest18 = 'yes';
-const eetest19 = 'yes';
-const eetest20 = 'yes';
-const eetest21 = 'yes';
-const eetest22 = 'yes';
-const eetest23 = 'yes';
-const eetest24 = 'yes';
-const eetest25 = 'yes';
-const eetest26 = 'yes';
-const eetest27 = 'yes';
-const eetest28 = 'yes';
-const eetest29 = 'yes';
-const eetest30 = 'yes';
-const eetest31 = 'yes';
-const eetest32 = 'yes';
-const eetest33 = 'yes';
-const eetest34 = 'yes';
-const eetest35 = 'yes';
-const eetest36 = 'yes';
-const eetest37 = 'yes';
-const eetest38 = 'yes';
-const eetest39 = 'yes';
-const eetest40 = 'yes';
-const eetest41 = 'yes';
-const eetest42 = 'yes';
-const eetest43 = 'yes';
-const eetest44 = 'yes';
-const eetest45 = 'yes';
-const eetest46 = 'yes';
-const eetest47 = 'yes';
-const eetest48 = 'yes';
-const eetest49 = 'yes';
-const eetest50 = 'yes';
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
 
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
-alert("yes");
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
+
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
+const EMAIL_RECIPIENT = process.env.EMAIL_RECIPIENT || "";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { firstName, lastName, email, message } = req.body;
+  const fullName = `${firstName} ${lastName}`.trim();
+
+  const mailgun = new Mailgun(FormData);
+  const client = mailgun.client({
+    username: "api",
+    key: API_KEY,
+  });
+
+  const messageData = {
+    from: `${fullName} <contact@mg.chrisgardiner.org>`,
+    to: EMAIL_RECIPIENT,
+    subject: "New message from Chris Gardiner's Portfolio",
+    text: `Hello,
+    
+    You have a new message from ${fullName} (${email}):
+    
+    ${message}`,
+  };
+
+  try {
+    await client.messages.create(DOMAIN, messageData);
+  } catch (err: any) {
+    console.error("Error sending email", err);
+  }
+
+  res.status(200).json({ submitted: true });
+}

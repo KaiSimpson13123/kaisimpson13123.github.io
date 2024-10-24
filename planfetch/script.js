@@ -8,10 +8,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
     }
 
     try {
-        console.log(`Fetching flight plans for CID: ${cid}`);
-        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.vatsim.net/v2/members/${cid}/flightplans`);
-
-        console.log(`Response status: ${response.status}`);
+        const response = await fetch(`https://api.vatsim.net/v2/members/${cid}/flightplans`);
 
         if (!response.ok) {
             if (response.status === 404) {
@@ -23,8 +20,6 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         }
 
         const data = await response.json();
-        console.log('Flight plan data:', data);
-
         flightPlansDiv.innerHTML = ''; // Clear previous results
 
         if (data.length === 0) {
@@ -41,7 +36,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
                 <p><strong>Callsign:</strong> ${flight.callsign}</p>
                 <p><strong>Aircraft:</strong> ${flight.aircraft}</p>
                 <p><strong>Departure:</strong> ${flight.dep} | Arrival: ${flight.arr}</p>
-                <p><strong>Departure Time:</strong> ${new Date(flight.deptime).toLocaleString()}</p>
+                <p><strong>Filed Time:</strong> ${new Date(flight.filed).toLocaleString()}</p>
                 <p><strong>Route:</strong> ${flight.route}</p>
                 <p><strong>Remarks:</strong> ${flight.rmks}</p>
             `;

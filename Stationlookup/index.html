@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATC Station Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ATC Station Lookup</h1>
+        <p>Enter any airport ICAO code to retrieve ATC station details.</p>
+        
+        <div class="form-group">
+            <input type="text" id="icaoInput" placeholder="Enter ICAO Code (e.g., YPPH)" maxlength="4">
+            <button id="searchBtn">Search</button>
+        </div>
+        
+        <div id="resultContainer"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

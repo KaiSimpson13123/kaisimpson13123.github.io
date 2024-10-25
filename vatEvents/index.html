@@ -78,6 +78,16 @@
                     eventLink.target = '_blank';
                     eventDiv.appendChild(eventLink);
 
+                    if (event.banner) {
+                    const eventBanner = document.createElement('img');
+                    eventBanner.style.width = '50%';
+                    eventBanner.style.height = '50%';
+                    eventBanner.src = event.banner;
+                    eventBanner.alt = event.name + ' banner';
+                    eventBanner.classList.add('banner');
+                    eventDiv.appendChild(eventBanner);
+            }
+
                     eventsContainer.appendChild(eventDiv);
                 });
             } catch (error) {

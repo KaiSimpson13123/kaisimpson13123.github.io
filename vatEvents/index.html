@@ -63,7 +63,7 @@
                     const eventTime = document.createElement('p');
                     const startTime = new Date(event.start_time).toLocaleString();
                     const endTime = new Date(event.end_time).toLocaleString();
-                    eventTime.textContent = `Start: ${startTime} | End: ${endTime}`;
+                    eventTime.textContent = `Start(z): ${startTime} | End(z): ${endTime}`;
                     eventDiv.appendChild(eventTime);
                     
                     const eventAirports = document.createElement('p');

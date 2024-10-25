@@ -71,19 +71,18 @@
                     eventAirports.classList.add('airports');
                     eventAirports.textContent = `Airports: ${event.airports.map(airport => airport.icao).join(', ')}`;
                     eventDiv.appendChild(eventAirports);
-                    
-                    const eventLink = document.createElement('a');
-                    eventLink.href = event.link;
-                    eventLink.textContent = 'View Event Details';
-                    eventLink.target = '_blank';
-                    eventDiv.appendChild(eventLink);
+
+                    const breaek = document.createElement('br');
 
                     if (event.banner) {
                     const eventBanner = document.createElement('img');
-                    eventBanner.style.width = '50%';
-                    eventBanner.style.height = '50%';
+                    eventBanner.style.width = '30%';
+                    eventBanner.style.height = '30%';
+                    eventBanner.href = event.link;
                     eventBanner.src = event.banner;
+                    eventBanner.target = '_blank';
                     eventBanner.alt = event.name + ' banner';
+                    eventBanner.setAttribute('loading', 'lazy'); // Enable lazy loading
                     eventBanner.classList.add('banner');
                     eventDiv.appendChild(eventBanner);
             }

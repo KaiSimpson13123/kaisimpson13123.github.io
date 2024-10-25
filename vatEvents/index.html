@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VATSIM Future Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .event {
+            background-color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .event h2 {
+            margin-top: 0;
+        }
+        .event p {
+            margin: 5px 0;
+        }
+        .airports {
+            margin-top: 10px;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming VATSIM Events</h1>
+    <div id="events-container"></div>
+
+    <script>
+        async function fetchEvents() {
+            try {
+                const response = await fetch('https://kaicors-6abf9658da78.herokuapp.com/https://my.vatsim.net/api/v2/events/latest');
+                const data = await response.json();
+                const eventsContainer = document.getElementById('events-container');
+                
+                data.data.forEach(event => {
+                    const eventDiv = document.createElement('div');
+                    eventDiv.classList.add('event');
+                    
+                    const eventName = document.createElement('h2');
+                    eventName.textContent = event.name;
+                    eventDiv.appendChild(eventName);
+                    
+                    const eventDescription = document.createElement('p');
+                    eventDescription.textContent = event.short_description;
+                    eventDiv.appendChild(eventDescription);
+                    
+                    const eventTime = document.createElement('p');
+                    const startTime = new Date(event.start_time).toLocaleString();
+                    const endTime = new Date(event.end_time).toLocaleString();
+                    eventTime.textContent = `Start: ${startTime} | End: ${endTime}`;
+                    eventDiv.appendChild(eventTime);
+                    
+                    const eventAirports = document.createElement('p');
+                    eventAirports.classList.add('airports');
+                    eventAirports.textContent = `Airports: ${event.airports.map(airport => airport.icao).join(', ')}`;
+                    eventDiv.appendChild(eventAirports);
+                    
+                    const eventLink = document.createElement('a');
+                    eventLink.href = event.link;
+                    eventLink.textContent = 'View Event Details';
+                    eventLink.target = '_blank';
+                    eventDiv.appendChild(eventLink);
+
+                    eventsContainer.appendChild(eventDiv);
+                });
+            } catch (error) {
+                console.error('Error fetching events:', error);
+            }
+        }
+
+        fetchEvents();
+    </script>
+</body>
+</html>

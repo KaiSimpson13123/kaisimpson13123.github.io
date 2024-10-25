@@ -53,8 +53,13 @@
                     const eventDiv = document.createElement('div');
                     eventDiv.classList.add('event');
                     
-                    const eventName = document.createElement('h2');
+                    const eventName = document.createElement('a');
                     eventName.textContent = event.name;
+                    eventName.href = event.link;
+                    eventName.target = '_blank';
+                    eventName.style.fontSize = '30px';
+                    eventName.style.color = 'black';
+                    eventName.title = 'View More Details';
                     eventDiv.appendChild(eventName);
                     
                     const eventDescription = document.createElement('p');

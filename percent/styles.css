@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .percentage h2 {
+    font-size: 400px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #333;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0%;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .period-info {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    font-size: 36px;
+    color: #cccccc;
+  }
+  
+  #periodProgress {
+    font-size: 32px;
+    color: #ffffff;
+  }
+  
+  @keyframes flash {
+    0%, 100% { color: #4CAF50; }   /* Start and end with green */
+    50% { color: #FFFFFF; }        /* Middle of the animation, text goes white */
+  }
+  
+  .flash {
+    animation: flash 1s ease-in-out infinite; /* Apply the flash animation */
+  }
+
+  @keyframes flash2 {
+    0%, 100% { background-color: #FF474C; }   /* Start and end with green */
+    50% { background-color: #333; }        /* Middle of the animation, text goes white */
+  }
+  
+  .flash2 {
+    animation: flash2 1s ease-in-out infinite; /* Apply the flash animation */
+  }

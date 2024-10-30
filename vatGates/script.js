@@ -52,7 +52,7 @@ function getAirportCoordinates(icaoCode) {
 
 // Function to create a rotated marker icon
 function createRotatedIcon(heading) {
-    const iconUrl = 'path/to/your/plane-icon.png'; // Replace with your icon path
+    const iconUrl = 'plane-icon.png'; // Replace with your icon path
     const iconSize = [30, 30]; // Size of the icon
 
     // Create a custom icon

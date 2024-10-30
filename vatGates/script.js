@@ -17,7 +17,7 @@ submitButton.addEventListener('click', () => {
 
 function initializeMap(icaoCode) {
     // Initialize the map using Leaflet
-    map = L.map(mapContainer).setView([0, 0], 1000); // Default to JFK location
+    map = L.map(mapContainer).setView([0, 0], 1); // Default to JFK location
 
     // Add OpenStreetMap tiles
     L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=YOUR_MAPBOX_ACCESS_TOKEN`, {

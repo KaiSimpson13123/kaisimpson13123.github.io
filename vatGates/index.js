@@ -9,10 +9,10 @@ async function getGateInfo() {
         if (!country) throw new Error('Country not recognized');
 
         // Determine if running on localhost or remote server
-        const filePath = `airports/${country}/${icaoCode}.json`;
+        const filePath = `vatGates/airports/${country}/${icaoCode}.json`; // Ensure the path includes vatGates
         const fetchUrl = window.location.hostname === "localhost" 
             ? filePath 
-            : `https://kaisimpson.xyz/vatGates/${filePath}`; // Adjusted for production
+            : `https://kaisimpson.xyz/${filePath}`; // Adjusted to include vatGates
 
         const response = await fetch(fetchUrl);
 

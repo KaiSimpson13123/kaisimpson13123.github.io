@@ -28,7 +28,7 @@ function initializeMap(icaoCode) {
     // Get the coordinates for the ICAO code and center the map
     getAirportCoordinates(icaoCode).then(coords => {
         if (coords) {
-            map.setView(coords, 15);
+            map.setView(coords, 13);
             addPlanesLayer();
             startUpdatingPlanes();
         } else {
@@ -55,8 +55,9 @@ function startUpdatingPlanes() {
         .then(data => {
             const planesOnGround = data.pilots.filter(plane => plane.altitude < 1000); // Filter planes on ground
             planesOnGround.forEach(plane => {
-                const departure = plane.flight_plan.departure; // Get departure airport code
-                const arrival = plane.flight_plan.arrival; // Get arrival airport code
+                const departure = plane.flight_plan.departure || "N/A"; // Default to "N/A" if undefined
+                const arrival = plane.flight_plan.arrival || "N/A"; // Default to "N/A" if undefined
+
                 // Create a custom icon with rotation
                 const icon = L.divIcon({
                     className: 'plane-icon',

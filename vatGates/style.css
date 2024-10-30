@@ -43,3 +43,10 @@ button:hover {
     margin-top: 20px;
     position: relative;
 }
+
+.plane-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

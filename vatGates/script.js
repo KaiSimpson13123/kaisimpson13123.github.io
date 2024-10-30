@@ -59,7 +59,7 @@ function startUpdatingPlanes() {
                 const icon = L.divIcon({
                     className: 'plane-icon',
                     html: `<div style="transform: rotate(${plane.heading}deg);">
-                               <img src="plane-icon.png" style="width: 30px; height: 30px;" />
+                               <img src="picon.png" style="width: 30px; height: 30px;" />
                            </div>`,
                     iconSize: [30, 30],
                     iconAnchor: [15, 15]

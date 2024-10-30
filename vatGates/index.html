@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Airport Gate Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Airport Gates Information</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Airport Gate Information</h1>
-        <input type="text" id="icaoInput" placeholder="Enter ICAO Code (e.g., KJFK)" />
-        <button onclick="getGateInfo()">Search</button>
-        
-        <div id="result"></div>
+    <h2>Airport Gates Information</h2>
+    <div class="input-container">
+        <input type="text" id="icaoInput" placeholder="Enter ICAO code (e.g., YSSY)" />
+        <button id="submitButton">Get Gates</button>
     </div>
+    <div id="result"></div>
+
     <script src="index.js"></script>
 </body>
 </html>

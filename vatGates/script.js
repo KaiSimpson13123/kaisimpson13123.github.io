@@ -28,7 +28,7 @@ function initializeMap(icaoCode) {
     // Get the coordinates for the ICAO code and center the map
     getAirportCoordinates(icaoCode).then(coords => {
         if (coords) {
-            map.setView(coords, 5);
+            map.setView(coords, 10);
             addPlanesLayer();
             startUpdatingPlanes();
         } else {

@@ -66,7 +66,7 @@ function startUpdatingPlanes() {
                 });
 
                 const marker = L.marker([plane.latitude, plane.longitude], { icon }).addTo(planesLayer);
-                marker.bindPopup(`<b>${plane.callsign}</b><br>${plane.departure} - ${plane.arrival}<br>Altitude: ${plane.altitude}`);
+                marker.bindPopup(`<b>${plane.callsign}</b><br>${plane.flight_plan.departure} - ${plane.flight_plan.arrival}<br>Altitude: ${plane.altitude}`);
             });
         })
         .catch(error => console.error('Error fetching VATSIM data:', error));

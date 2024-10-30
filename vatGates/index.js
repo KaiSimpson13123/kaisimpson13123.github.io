@@ -4,13 +4,17 @@ async function getGateInfo() {
     const resultDiv = document.getElementById('result');
 
     try {
-        // Construct file path based on ICAO code and prepend the CORS proxy
+        // Construct file path based on ICAO code
         const country = getCountryFromICAO(icaoCode);
         if (!country) throw new Error('Country not recognized');
 
-        // Use window.location.origin to make the URL absolute, then prepend with the CORS proxy
-        const filePath = `${window.location.origin}/airports/${country}/${icaoCode}.json`;
-        const response = await fetch(`https://kaicors-6abf9658da78.herokuapp.com/${filePath}`);
+        // Determine if running on localhost or remote server
+        const filePath = `airports/${country}/${icaoCode}.json`;
+        const fetchUrl = window.location.hostname === "localhost" 
+            ? filePath 
+            : `https://kaisimpson.xyz/vatGates/${filePath}`; // Adjusted for production
+
+        const response = await fetch(fetchUrl);
 
         if (!response.ok) throw new Error('Airport not found');
 
@@ -30,6 +34,7 @@ async function getGateInfo() {
         resultDiv.innerHTML = `<p>Could not retrieve data for ICAO code: ${icaoCode}</p>`;
     }
 }
+
 
 
 

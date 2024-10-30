@@ -9,7 +9,13 @@ body {
 
 h2 {
     text-align: center;
-    color: #fff; /* White color for headings */
+    color: #fff; /* White color for main headings */
+}
+
+h3 {
+    text-align: center;
+    color: #d9d9d9; /* Lighter color for terminal headings */
+    margin: 20px 0 10px; /* Margin for spacing */
 }
 
 /* Input field styling */
@@ -20,6 +26,8 @@ input[type="text"] {
     border-radius: 5px;
     margin-bottom: 20px;
     width: calc(100% - 22px);
+    background-color: #003366; /* Darker blue for input */
+    color: #ffffff; /* White text for input */
 }
 
 /* Result container styling */
@@ -37,11 +45,12 @@ input[type="text"] {
     margin: 10px;
     padding: 15px;
     width: 250px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for hover effects */
 }
 
 .card:hover {
     transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
 }
 
 /* Airline logo styling */
@@ -63,4 +72,15 @@ input[type="text"] {
     text-align: center;
     margin: 0;
     color: #d9d9d9; /* Lighter color for additional text */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 20px); /* Adjust input width */
+    }
 }

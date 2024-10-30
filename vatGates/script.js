@@ -28,7 +28,7 @@ function initializeMap(icaoCode) {
     // Get the coordinates for the ICAO code and center the map
     getAirportCoordinates(icaoCode).then(coords => {
         if (coords) {
-            map.setView(coords, 10);
+            map.setView(coords, 15);
             addPlanesLayer();
             startUpdatingPlanes();
         } else {
@@ -55,6 +55,8 @@ function startUpdatingPlanes() {
         .then(data => {
             const planesOnGround = data.pilots.filter(plane => plane.altitude < 1000); // Filter planes on ground
             planesOnGround.forEach(plane => {
+                const departure = plane.flight_plan.departure; // Get departure airport code
+                const arrival = plane.flight_plan.arrival; // Get arrival airport code
                 // Create a custom icon with rotation
                 const icon = L.divIcon({
                     className: 'plane-icon',
@@ -66,7 +68,7 @@ function startUpdatingPlanes() {
                 });
 
                 const marker = L.marker([plane.latitude, plane.longitude], { icon }).addTo(planesLayer);
-                marker.bindPopup(`<b>${plane.callsign}</b><br>${plane.flight_plan.departure} - ${plane.flight_plan.arrival}<br>Altitude: ${plane.altitude}`);
+                marker.bindPopup(`<b>${plane.callsign}</b><br>${departure} - ${arrival}<br>Altitude: ${plane.altitude}`);
             });
         })
         .catch(error => console.error('Error fetching VATSIM data:', error));

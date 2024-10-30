@@ -75,5 +75,6 @@ function startUpdatingPlanes() {
     clearInterval(updateInterval);
     updateInterval = setInterval(() => {
         startUpdatingPlanes();
+        console.log("Planes Updated!")
     }, 10000);
 }

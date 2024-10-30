@@ -1,67 +1,66 @@
-/* General Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-}
-
-.container {
-    text-align: center;
-    max-width: 400px;
+    background-color: #001f33; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    margin: 0;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-h1 {
-    color: #333333;
-    margin-bottom: 20px;
+h2 {
+    text-align: center;
+    color: #fff; /* White color for headings */
 }
 
+/* Input field styling */
 input[type="text"] {
-    width: 80%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     font-size: 16px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    width: calc(100% - 22px);
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Result container styling */
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.result {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #444;
-    text-align: left;
+/* Card styles */
+.card {
+    background-color: #003366; /* Slightly lighter blue for cards */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.2s;
 }
 
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Airline logo styling */
 .airline-logo {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
+    width: 50px; /* Adjust the size as necessary */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* Airline name and gate information */
+.card h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #ffffff; /* White text for airline names */
+}
+
+.card p {
+    text-align: center;
+    margin: 0;
+    color: #d9d9d9; /* Lighter color for additional text */
 }

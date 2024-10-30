@@ -36,6 +36,17 @@ async function getGateInfo() {
 }
 
 
+// Display gate and airline information
+resultDiv.innerHTML = `<h2>Gates for ${icaoCode}</h2>`;
+gateData.gates.forEach(gate => {
+    resultDiv.innerHTML += `
+        <div class="card">
+            <img src="${getAirlineLogo(gate.airline)}" class="airline-logo" alt="${gate.airline}" />
+            <h3>${gate.airline}</h3>
+            <p>Gate: ${gate.gate}</p>
+        </div>
+    `;
+});
 
 
 // Helper function to map ICAO to country

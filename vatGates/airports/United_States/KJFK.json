@@ -1,0 +1,9 @@
+{
+    "icao": "KJFK",
+    "airport_name": "John F. Kennedy International Airport",
+    "gates": [
+        { "gate": "A1", "airline": "DAL" },
+        { "gate": "A2", "airline": "AAL" },
+        { "gate": "B3", "airline": "QFA" }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "icao": "YSSY",
+    "airport_name": "Sydney Kingsford Smith Airport",
+    "gates": [
+        { "gate": "G1", "airline": "QFA" },
+        { "gate": "G2", "airline": "QFA" },
+        { "gate": "G3", "airline": "AAL" }
+    ]
+}

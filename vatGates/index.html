@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>VATSIM Plane Map</title>
+    <title>Airport Map</title>
 </head>
 <body>
-    <h1>VATSIM Plane Map</h1>
-    <div class="input-container">
-        <input type="text" id="icaoInput" placeholder="Enter ICAO code (e.g., KJFK)">
-        <button id="submitButton">Show Map</button>
+    <div id="searchContainer" class="centered">
+        <input type="text" id="icaoInput" placeholder="Enter ICAO Code (e.g., KJFK)">
+        <button id="submitButton">Search</button>
     </div>
-    <div id="mapContainer"></div>
-    <script type="module" src="script.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>   
+    <div id="mapContainer" class="hidden"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

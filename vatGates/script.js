@@ -101,5 +101,5 @@ function startUpdatingPlanes() {
     
     // Update every 10 seconds
     clearInterval(updateInterval);
-    updateInterval = setInterval(startUpdatingPlanes, 10000); // Call the function every 10 seconds
+    updateInterval = setInterval(startUpdatingPlanes, 5000); // Call the function every 10 seconds
 }

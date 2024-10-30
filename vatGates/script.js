@@ -50,6 +50,30 @@ function getAirportCoordinates(icaoCode) {
     return Promise.resolve(coordinates); // Return as a resolved Promise
 }
 
+// Function to create a rotated marker icon
+function createRotatedIcon(heading) {
+    const iconUrl = 'path/to/your/plane-icon.png'; // Replace with your icon path
+    const iconSize = [30, 30]; // Size of the icon
+
+    // Create a custom icon
+    const icon = L.icon({
+        iconUrl: iconUrl,
+        iconSize: iconSize,
+        iconAnchor: [iconSize[0] / 2, iconSize[1] / 2], // Center the icon
+    });
+
+    // Create a marker
+    const marker = L.marker([0, 0], { icon: icon }).addTo(planesLayer);
+
+    // Rotate the icon using CSS
+    const iconElement = marker.getElement();
+    if (iconElement) {
+        iconElement.style.transform = `rotate(${heading}deg)`;
+    }
+    
+    return marker;
+}
+
 // Function to add planes layer to the map
 function addPlanesLayer() {
     planesLayer = L.layerGroup().addTo(map); // Create and add a layer for planes
@@ -68,8 +92,8 @@ function startUpdatingPlanes() {
             
             // Add markers for each plane
             planesOnGround.forEach(plane => {
-                const marker = L.marker([plane.latitude, plane.longitude]).addTo(planesLayer);
-                marker.setRotationAngle(plane.heading); // Rotate marker based on heading
+                const marker = createRotatedIcon(plane.heading);
+                marker.setLatLng([plane.latitude, plane.longitude]); // Set the position of the marker
                 marker.bindPopup(`<b>${plane.callsign}</b><br>Altitude: ${plane.altitude} ft`); // Bind popup with plane details
             });
         })

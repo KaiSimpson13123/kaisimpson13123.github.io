@@ -20,9 +20,11 @@ function initializeMap(icaoCode) {
     map = L.map(mapContainer).setView([0, 0], 1000); // Default to JFK location
 
     // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token=YOUR_MAPBOX_ACCESS_TOKEN`, {
         maxZoom: 19,
-        attribution: '© OpenStreetMap'
+        tileSize: 512,
+        zoomOffset: -1,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://www.mapbox.com/">Mapbox</a>',
     }).addTo(map);
 
     // Get the coordinates for the ICAO code and center the map

@@ -17,7 +17,7 @@ submitButton.addEventListener('click', () => {
 
 function initializeMap(icaoCode) {
     // Initialize the map using Leaflet
-    map = L.map(mapContainer).setView([40.6413, -73.7781], 10); // Default to JFK location
+    map = L.map(mapContainer).setView([0, 0], 1000); // Default to JFK location
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

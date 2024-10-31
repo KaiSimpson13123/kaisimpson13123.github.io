@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vatgates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="start">
+        <header>
+            <h1>Airport A380 Checker</h1>
+            <p>Determine the A380 Suitability for an Airport</p>
+            <br>
+            <hr>
+        </header>
+        <div class="search-area">
+            <input id="airport-input" type="text" placeholder="Search by Airport ICAO..." />
+            <button id="check-button" type="button">Search</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

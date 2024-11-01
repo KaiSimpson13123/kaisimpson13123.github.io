@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Flights - vatStats</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo-placeholder.png" alt="Logo"><h2>vatStats</h2>
+            <nav>
+                <a href="index.html">
+                    <span class="icon-button">🏠</span> Home
+                </a>
+                <a href="flights.html">
+                    <span class="icon-button">✈️</span> Live Flights
+                </a>
+                <a href="aircraft.html">
+                    <span class="icon-button">🛫</span> Aircraft Types
+                </a>
+            </nav>
+        </header>
+
+        <h1>Live Flights</h1>
+        <div class="filter">
+            <input type="text" id="aircraftFilter" placeholder="Filter by Aircraft Type (ICAO)">
+            <input type="text" id="departingFilter" placeholder="Filter by Departure Airport">
+            <input type="text" id="arrivingFilter" placeholder="Filter by Arrival Airport">
+            <button onclick="filterFlights()">Filter</button>
+        </div>
+
+        <div class="flights">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Callsign</th>
+                        <th>Aircraft Type</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Altitude</th>
+                        <th>Speed</th>
+                        <th>Transponder</th>
+                    </tr>
+                </thead>
+                <tbody id="flightsTable"></tbody>
+            </table>
+        </div>
+
+        <div id="flightModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="flightDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        fetchData();
+    </script>
+</body>
+</html>

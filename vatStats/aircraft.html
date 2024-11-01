@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Aircraft Types - vatStats</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo-placeholder.png" alt="Logo"><h2>vatStats</h2>
+            <nav>
+                <a href="index.html">
+                    <span class="icon-button">🏠</span> Home
+                </a>
+                <a href="flights.html">
+                    <span class="icon-button">✈️</span> Live Flights
+                </a>
+                <a href="aircraft.html">
+                    <span class="icon-button">🛫</span> Aircraft Types
+                </a>
+            </nav>
+        </header>
+
+        <h1>Top Aircraft Types</h1>
+        <div id="aircraftTypeList" class="aircraft-list"></div>
+    </div>
+    <hr>
+    <script>
+        fetchData();
+    </script>
+</body>
+</html>

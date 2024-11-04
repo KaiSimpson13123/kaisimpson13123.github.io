@@ -1,0 +1,10 @@
+{
+    "YMML": [
+        { "name": "Gate A1", "maxSize": "F" },
+        { "name": "Gate B2", "maxSize": "E" }
+    ],
+    "YBBN": [
+        { "name": "Gate C3", "maxSize": "F" },
+        { "name": "Gate D4", "maxSize": "D" }
+    ]
+}

@@ -1,35 +1,52 @@
 document.getElementById('check-button').addEventListener('click', function() {
     const airportCode = document.getElementById('airport-input').value.toUpperCase();
-    
+    const popupMessage = document.getElementById('popup-message');
+    const popup = document.getElementById('popup');
+
     // Check if the airport is in the compatible list
     fetch('airports.txt')
         .then(response => response.text())
         .then(data => {
             const airports = data.split('\n').map(line => line.trim().toUpperCase());
             const isCompatible = airports.includes(airportCode);
-            const popupMessage = document.getElementById('popup-message');
-            const popup = document.getElementById('popup');
 
             if (isCompatible) {
-                // Fetch gate data from the API for the compatible airport
-                fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airportCode}`)
+                // Fetch manual gates data from manualGates.json
+                fetch('manualGates.json')
                     .then(response => response.json())
-                    .then(apiData => {
-                        const compatibleGates = apiData.gates
-                            .filter(gate => gate.maxSize === 'F')
-                            .map(gate => gate.name)
-                            .join(', ');
+                    .then(manualData => {
+                        // Retrieve manual gates for the given airport code
+                        const manualGatesList = manualData[airportCode] || [];
+                        const compatibleManualGates = manualGatesList.filter(gate => gate.maxSize === 'F');
 
-                        const gateInfo = compatibleGates 
-                            ? `Compatible gates:<br> ${compatibleGates}`
-                            : "No gates with max size 'F' found.";
+                        // Fetch gate data from the API for the compatible airport
+                        fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airportCode}`)
+                            .then(response => response.json())
+                            .then(apiData => {
+                                const compatibleApiGates = apiData.gates
+                                    .filter(gate => gate.maxSize === 'F')
+                                    .map(gate => gate.name);
 
-                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br>${gateInfo}`;
-                        popup.style.display = 'flex';
+                                // Combine manual and API gates
+                                const combinedGates = [...compatibleManualGates.map(gate => gate.name), ...compatibleApiGates];
+                                const uniqueGates = Array.from(new Set(combinedGates)); // Ensure unique gate names
+
+                                const gateInfo = uniqueGates.length
+                                    ? `Compatible gates:<br> ${uniqueGates.join(', ')}`
+                                    : "No gates with max size 'F' found.";
+
+                                popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br>${gateInfo}`;
+                                popup.style.display = 'flex';
+                            })
+                            .catch(error => {
+                                console.error('Error fetching gate data:', error);
+                                popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve gate information.`;
+                                popup.style.display = 'flex';
+                            });
                     })
                     .catch(error => {
-                        console.error('Error fetching gate data:', error);
-                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve gate information.`;
+                        console.error('Error fetching manual gates:', error);
+                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve manual gate information.`;
                         popup.style.display = 'flex';
                     });
             } else {

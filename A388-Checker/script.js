@@ -21,7 +21,7 @@ document.getElementById('check-button').addEventListener('click', function() {
                             .join(', ');
 
                         const gateInfo = compatibleGates 
-                            ? `<strong>Compatible gates:</strong> ${compatibleGates}`
+                            ? `Compatible gates:<br> ${compatibleGates}`
                             : "No gates with max size 'F' found.";
 
                         popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br>${gateInfo}`;

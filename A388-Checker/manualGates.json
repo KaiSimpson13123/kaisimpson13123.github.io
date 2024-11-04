@@ -28,5 +28,9 @@
     ],
     "OMDB": [
         { "name": "Maybe I should list where you can't park in Dubai...", "maxSize": "F" }
+    ],
+    "SKCL": [
+        { "name": "Front of D17 & D18", "maxSize": "F" },
+        { "name": "Gate D19", "maxSize": "F" }
     ]
 }

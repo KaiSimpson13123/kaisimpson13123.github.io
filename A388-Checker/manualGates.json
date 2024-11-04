@@ -7,7 +7,9 @@
         { "name": "Gate 76", "maxSize": "F" }
     ],
     "YPPH": [
-        { "name": "T1 Gate 150", "maxSize": "F" }
+        { "name": "T1 Gate 150", "maxSize": "F" },
+        { "name": "T1 Gate 162", "maxSize": "F" },
+        { "name": "T1 Gate 163", "maxSize": "F" }
     ],
     "YBAS": [
         { "name": "Gate 26", "maxSize": "F" },

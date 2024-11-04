@@ -4,6 +4,7 @@ document.getElementById('check-button').addEventListener('click', checkAirportCo
 document.getElementById('airport-input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') { // Check if the pressed key is "Enter"
         checkAirportCompatibility(); // Call the function directly
+        document.getElementById('check-button').style.backgroundColor = '#fff';
     }
 });
 

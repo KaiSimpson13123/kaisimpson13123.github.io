@@ -14,5 +14,12 @@
     "YBAS": [
         { "name": "Gate 26", "maxSize": "F" },
         { "name": "Gate 28", "maxSize": "F" }
+    ],
+    "YMML": [
+        { "name": "Gate D9", "maxSize": "F" },
+        { "name": "Gate D11", "maxSize": "F" },
+        { "name": "Gate D13", "maxSize": "F" },
+        { "name": "Gate D15", "maxSize": "F" },
+        { "name": "Gate D18B", "maxSize": "F" }
     ]
 }

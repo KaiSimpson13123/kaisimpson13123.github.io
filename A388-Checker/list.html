@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airport List</title>
     <link rel="stylesheet" href="list.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared.css">
+    <title>Airport List</title>
 </head>
 <body>
+    <a href="/A388-Checker/" class="button1">Back</a>
     <div class="container">
         <header>
             <h1>Airport List</h1>
-            <p>Browse through the list of A380 compatible airports.</p>
+            <p>Click on a card to view gate information</p>
+            <br>
             <hr>
         </header>
-        <div class="airport-list-container">
-            <div id="airport-list" class="airport-list"></div>
+        <div class="airport-list-container" id="airport-list-container">
+            <!-- Airport cards will be generated here by JavaScript -->
         </div>
     </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+    
     <script src="list.js"></script>
 </body>
 </html>

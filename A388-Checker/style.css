@@ -131,3 +131,29 @@ p {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.button {
+    top: 3px;
+    left: 3px;
+    position: fixed;
+    display: inline-block;
+    padding: 10px 20px; /* Padding for a comfortable clickable area */
+    background-color: #007BFF; /* Base color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline for links */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:active {
+    transform: scale(0.95); /* Slightly shrink when active */
+}

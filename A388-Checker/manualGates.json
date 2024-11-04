@@ -43,5 +43,8 @@
         { "name": "Gate 32", "maxSize": "F" },
         { "name": "Gate 37", "maxSize": "F" },
         { "name": "Gate E6", "maxSize": "F" }
+    ],
+    "SKRG": [
+        { "name": "Cargo 1A", "maxSize": "F" }
     ]
 }

@@ -4,7 +4,7 @@ document.getElementById('check-button').addEventListener('click', checkAirportCo
 document.getElementById('airport-input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') { // Check if the pressed key is "Enter"
         checkAirportCompatibility(); // Call the function directly
-        document.getElementById('check-button').style.textContent = 'Checking...';
+        document.getElementById('check-button').textContent = 'Checking...';
     }
 });
 
@@ -47,7 +47,7 @@ function checkAirportCompatibility() {
 
                                 popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br><span title="${airportCode}">${gateInfo}</span>`;
                                 popup.style.display = 'flex'; // Show the popup
-                                document.getElementById('check-button').style.textContent = 'Check';
+                                document.getElementById('check-button').textContent = 'Check';
                             })
                             .catch(error => {
                                 console.error('Error fetching gate data:', error);

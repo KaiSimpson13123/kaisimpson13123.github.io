@@ -25,5 +25,8 @@
     "EFHK": [
         { "name": "Gate W48", "maxSize": "F" },
         { "name": "De-Icing Stand 815", "maxSize": "F" }
+    ],
+    "OMDB": [
+        { "name": "Maybe I should list where you can't park in Dubai..."}
     ]
 }

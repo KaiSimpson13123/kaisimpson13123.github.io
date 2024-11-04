@@ -93,31 +93,33 @@ p {
 }
 
 .popup-content {
-    background: #fff; /* White background for the popup content */
-    color: #333; /* Text color */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Center the text */
-    max-width: 400px; /* Maximum width */
-    margin: auto; /* Centering */
-    position: relative;
+    position: relative; /* Keep relative positioning for absolutely positioned children */
+    background-color: #fefefe;
+    margin: 15% auto; /* Center the popup */
+    padding: 40px 20px 20px 20px; /* Add top padding for space above text */
+    border: 1px solid #888;
+    max-width: 400px; /* Adjust width as needed */
+    border-radius: 8px; /* Optional: for rounded corners */
+    text-align: center;
+    color: #aaa;
 }
 
 .close-button {
     color: #aaa;
-    position: absolute; /* Change to absolute positioning */
-    top: 4px; /* Adjust the top position */
-    right: 23px; /* Adjust the right position */
+    position: absolute; /* Ensure the close button is absolutely positioned */
+    top: 3px; /* Position from the top */
+    right: 8px; /* Position from the right */
     font-size: 28px;
     font-weight: bold;
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: black; /* Change color on hover */
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 .credits {

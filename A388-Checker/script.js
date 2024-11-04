@@ -9,7 +9,7 @@ document.getElementById('check-button').addEventListener('click', function() {
             const popup = document.getElementById('popup');
 
             if (isCompatible) {
-                popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span> <a href="https://www.ifatc.org/gates?code=${airportCode}" style="color: black;">Gate Info</a>`;
+                popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><a href="https://www.ifatc.org/gates?code=${airportCode}" target="_blank" style="color: black;">Gate Info</a>`;
             } else {
                 popupMessage.innerHTML = `The airport "${airportCode}" is <span style="color: #ED4337;">NOT A380 compatible</span> or does not exist.`;
             }

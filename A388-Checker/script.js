@@ -1,4 +1,13 @@
-document.getElementById('check-button').addEventListener('click', function() {
+document.getElementById('check-button').addEventListener('click', checkAirportCompatibility);
+
+// Add keydown event listener for the input field
+document.getElementById('airport-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') { // Check if the pressed key is "Enter"
+        checkAirportCompatibility(); // Call the function directly
+    }
+});
+
+function checkAirportCompatibility() {
     const airportCode = document.getElementById('airport-input').value.toUpperCase();
     const popupMessage = document.getElementById('popup-message');
     const popup = document.getElementById('popup');
@@ -57,7 +66,7 @@ document.getElementById('check-button').addEventListener('click', function() {
         .catch(error => {
             console.error('Error:', error);
         });
-});
+}
 
 document.getElementById('close-popup').addEventListener('click', function() {
     document.getElementById('popup').style.display = 'none';

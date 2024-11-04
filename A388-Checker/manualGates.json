@@ -5,5 +5,8 @@
         { "name": "Gate 73", "maxSize": "F" },
         { "name": "Gate 74", "maxSize": "F" },
         { "name": "Gate 76", "maxSize": "F" }
+    ],
+    "YPPH": [
+        { "name": "T1 Gate 150", "maxSize": "F" }
     ]
 }

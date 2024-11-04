@@ -3,13 +3,6 @@ document.getElementById('check-button').addEventListener('click', function() {
     const popupMessage = document.getElementById('popup-message');
     const popup = document.getElementById('popup');
 
-
-    document.getElementById('airport-input').addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            checkAirportCompatibility();
-        }
-    });
-
     // Check if the airport is in the compatible list
     fetch('airports.txt')
         .then(response => response.text())

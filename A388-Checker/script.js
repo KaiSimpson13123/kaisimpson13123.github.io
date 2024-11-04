@@ -37,17 +37,35 @@ function checkAirportCompatibility() {
                                     .filter(gate => gate.maxSize === 'F')
                                     .map(gate => gate.name);
 
-                                // Combine manual and API gates
-                                const combinedGates = [...compatibleManualGates.map(gate => gate.name), ...compatibleApiGates];
-                                const uniqueGates = Array.from(new Set(combinedGates)); // Ensure unique gate names
+                                // Fetch deleted gates
+                                fetch('deletedGates.json')
+                                    .then(res => res.json())
+                                    .then(deletedData => {
+                                        const deletedGates = deletedData[airportCode] || [];
 
-                                const gateInfo = uniqueGates.length
-                                    ? `Compatible gates:<br> ${uniqueGates.join(', ')}`
-                                    : "No Class F Gates Found.";
+                                        // Combine manual and API gates
+                                        const combinedGates = [
+                                            ...compatibleManualGates.map(gate => gate.name),
+                                            ...compatibleApiGates
+                                        ];
 
-                                popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br><span title="${airportCode}">${gateInfo}</span>`;
-                                popup.style.display = 'flex'; // Show the popup
-                                document.getElementById('check-button').textContent = 'Check';
+                                        // Remove gates that are in deleted gates
+                                        const uniqueGates = Array.from(new Set(combinedGates)); // Ensure unique gate names
+                                        const filteredGates = uniqueGates.filter(gate => !deletedGates.includes(gate));
+
+                                        const gateInfo = filteredGates.length
+                                            ? `Compatible gates:<br> ${filteredGates.join(', ')}`
+                                            : "No Class F Gates Found.";
+
+                                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br><span title="${airportCode}">${gateInfo}</span>`;
+                                        popup.style.display = 'flex'; // Show the popup
+                                        document.getElementById('check-button').textContent = 'Check';
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching deleted gates:', error);
+                                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve deleted gate information.`;
+                                        popup.style.display = 'flex'; // Show the popup
+                                    });
                             })
                             .catch(error => {
                                 console.error('Error fetching gate data:', error);

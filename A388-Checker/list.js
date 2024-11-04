@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     fetch('airports.txt')
         .then(response => {
             if (!response.ok) {
@@ -26,7 +26,7 @@ function displayAirports(airports) {
         card.innerHTML = `
             <div class="airport-name">${airport}</div>
             <br>
-            <button id="viewbutton" class="card-button">View Gates</button>
+            <button class="card-button">View Gates</button>
         `;
         card.addEventListener('click', () => {
             viewGates(airport);
@@ -36,56 +36,51 @@ function displayAirports(airports) {
 }
 
 function viewGates(airport) {
-    // Fetching manual gates data
-    fetch('manualGates.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(manualData => {
-            // Retrieve manual gates for the given airport code
-            const manualGatesList = manualData[airport] || [];
-            const compatibleManualGates = manualGatesList.filter(gate => gate.maxSize === 'F').map(gate => gate.name);
+    Promise.all([
+        fetch('manualGates.json').then(res => res.json()).catch(() => ({})), // Fetch manual gates
+        fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airport}`).then(res => res.json()).catch(() => ({ gates: [] })), // Fetch gates from API
+        fetch('deletedGates.json').then(res => res.json()).catch(() => ({})) // Fetch deleted gates
+    ])
+    .then(([manualGatesData, apiGatesData, deletedGatesData]) => {
+        const manualGatesList = manualGatesData[airport] || [];
+        const compatibleManualGates = manualGatesList.filter(gate => gate.maxSize === 'F').map(gate => gate.name);
 
-            // Fetching gate data from the API
-            fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airport}`)
-                .then(response => response.json())
-                .then(apiData => {
-                    const compatibleApiGates = apiData.gates
-                        .filter(gate => gate.maxSize === 'F')
-                        .map(gate => gate.name);
+        const compatibleApiGates = apiGatesData.gates
+            .filter(gate => gate.maxSize === 'F')
+            .map(gate => gate.name);
 
-                    // Combine manual and API gates
-                    const combinedGates = [...compatibleManualGates, ...compatibleApiGates];
-                    const uniqueGates = Array.from(new Set(combinedGates)); // Ensure unique gate names
+        // Get the deleted gates for this airport
+        const deletedGates = deletedGatesData[airport] || [];
+        
+        // Combine and filter gates
+        const combinedGates = [...compatibleManualGates, ...compatibleApiGates];
+        const uniqueGates = Array.from(new Set(combinedGates)); // Ensure unique gate names
 
-                    const gateInfo = uniqueGates.length
-                        ? `Gates for ${airport}: ${uniqueGates.join(', ')}`
-                        : `No gates with max size F found for ${airport}.`;
+        // Remove any gates that are in the deleted gates list
+        const finalGates = uniqueGates.filter(gate => !deletedGates.includes(gate));
 
-                    showPopup(gateInfo);
-                })
-                .catch(error => {
-                    console.error('Error fetching gate data from API:', error);
-                    showPopup(`Could not retrieve gates for ${airport}.`);
-                });
-        })
-        .catch(error => {
-            console.error('Error fetching manual gates:', error);
-            showPopup(`Could not retrieve manual gates for ${airport}.`);
-        });
+        if (finalGates.length) {
+            displayPopup(airport, finalGates);
+        } else {
+            displayPopup(airport, ["No class F gates found."]);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching gate data:', error);
+        displayPopup(airport, ["Error retrieving gate information."]);
+    });
 }
 
-function showPopup(message) {
-    const popupMessage = document.getElementById('popup-message');
+function displayPopup(airport, gates) {
     const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
     
-    popupMessage.innerHTML = message;
+    popupMessage.innerHTML = `Gates for Airport: ${airport}<br>${gates.join(', ')}`;
+    
     popup.style.display = 'flex';
 }
 
-document.getElementById('close-popup').addEventListener('click', function() {
+// Close popup when the close button is clicked
+document.getElementById('close-popup').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'none';
 });

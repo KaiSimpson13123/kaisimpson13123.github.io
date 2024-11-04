@@ -21,5 +21,9 @@
         { "name": "Gate D13", "maxSize": "F" },
         { "name": "Gate D15", "maxSize": "F" },
         { "name": "Gate D18B", "maxSize": "F" }
+    ],
+    "EFHK": [
+        { "name": "Gate W48", "maxSize": "F" },
+        { "name": "De-Icing Stand 815", "maxSize": "F" }
     ]
 }

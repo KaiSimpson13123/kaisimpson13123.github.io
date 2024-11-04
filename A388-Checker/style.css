@@ -106,8 +106,8 @@ p {
 .close-button {
     color: #aaa;
     position: absolute; /* Change to absolute positioning */
-    top: 10px; /* Adjust the top position */
-    right: 20px; /* Adjust the right position */
+    top: 4px; /* Adjust the top position */
+    right: 23px; /* Adjust the right position */
     font-size: 28px;
     font-weight: bold;
 }

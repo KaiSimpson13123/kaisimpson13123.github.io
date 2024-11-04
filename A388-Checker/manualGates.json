@@ -32,5 +32,11 @@
     "SKCL": [
         { "name": "Front of D17 & D18", "maxSize": "F" },
         { "name": "Gate D19", "maxSize": "F" }
+    ],
+    "EFTP": [
+        { "name": "Stand B1", "maxSize": "F" }
+    ],
+    "EFRO": [
+        { "name": "5B", "maxSize": "F" }
     ]
 }

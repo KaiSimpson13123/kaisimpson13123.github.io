@@ -94,12 +94,13 @@ p {
 
 .popup-content {
     background: #fff; /* White background for the popup content */
-    color: #A6BABD; /* Text color */
+    color: #333; /* Text color */
     padding: 20px;
     border-radius: 8px; /* Rounded corners */
     text-align: center; /* Center the text */
     max-width: 400px; /* Maximum width */
     margin: auto; /* Centering */
+    position: relative;
 }
 
 .close-button {
@@ -117,6 +118,7 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 .credits {
   color: black;

@@ -1,55 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const regionFilter = document.getElementById('region-filter');
-    const countryFilter = document.getElementById('country-filter');
-    const cardContainer = document.getElementById('card-container');
+document.addEventListener("DOMContentLoaded", function () {
+    const airportListContainer = document.getElementById("airport-list");
 
-    // Example structure for airport data
-    let airports = [];
-
-    // Fetch airport data from airports.txt
-    fetch('airports.txt')
+    // Fetch and display airports
+    fetch("airports.txt")
         .then(response => response.text())
         .then(data => {
-            airports = data.split('\n').map(line => {
-                const [icao, name, country, region] = line.split(',');
-                return { icao, name, country, region };
+            const airports = data.split('\n').map(line => line.trim()).filter(Boolean);
+            airports.forEach(airportCode => {
+                createAirportCard(airportCode);
             });
-            displayAirports(airports);
         })
-        .catch(error => console.error('Error fetching airports:', error));
+        .catch(error => console.error("Error fetching airports:", error));
 
-    // Display filtered airport cards
-    function displayAirports(filteredAirports) {
-        cardContainer.innerHTML = ''; // Clear existing cards
-        filteredAirports.forEach(airport => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <h3>${airport.name}</h3>
-                <p>ICAO: ${airport.icao}</p>
-                <p>Country: ${airport.country}</p>
-                <p>Region: ${airport.region}</p>
-            `;
-            card.addEventListener('click', () => {
-                window.location.href = `https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airport.icao}`;
-            });
-            cardContainer.appendChild(card);
-        });
+    // Function to create an airport card
+    function createAirportCard(airportCode) {
+        const card = document.createElement("div");
+        card.classList.add("airport-card");
+        card.innerHTML = `
+            <h2>${airportCode}</h2>
+            <button class="view-gates-btn">View Gates</button>
+        `;
+
+        card.querySelector(".view-gates-btn").addEventListener("click", () => showGateInfo(airportCode));
+        airportListContainer.appendChild(card);
     }
 
-    // Filter by region or country
-    function filterAirports() {
-        const selectedRegion = regionFilter.value;
-        const selectedCountry = countryFilter.value;
-
-        const filtered = airports.filter(airport => {
-            return (selectedRegion === '' || airport.region === selectedRegion) &&
-                   (selectedCountry === '' || airport.country === selectedCountry);
-        });
-        displayAirports(filtered);
+    // Function to fetch and show gate information
+    function showGateInfo(airportCode) {
+        fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airportCode}`)
+            .then(response => response.json())
+            .then(apiData => {
+                const gates = apiData.gates
+                    .filter(gate => gate.maxSize === 'F')
+                    .map(gate => gate.name)
+                    .join(", ");
+                alert(`Airport ${airportCode} has the following gates:\n${gates || "No compatible gates found."}`);
+            })
+            .catch(error => console.error("Error fetching gate information:", error));
     }
-
-    // Event listeners for dropdown filters
-    regionFilter.addEventListener('change', filterAirports);
-    countryFilter.addEventListener('change', filterAirports);
 });

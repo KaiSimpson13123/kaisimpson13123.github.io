@@ -3,113 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A380 Airport List</title>
-    <link rel="icon" type="image/png" href="../assets/KS.png" />
+    <title>Airport List</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #333;
-        }
-        .filter-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .filter-container select {
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-        }
-        .card {
-            width: 250px;
-            border-radius: 10px;
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            font-size: 1.5em;
-            margin: 10px;
-            color: #333;
-        }
-        .card p {
-            margin: 10px;
-            color: #777;
-        }
-        .credits {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="list.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Airport A380 Compatibility List</h1>
-            <p>Select a region or country to filter airports.</p>
-        </div>
-        <div class="filter-container">
-            <select id="region-filter">
-                <option value="">All Regions</option>
-                <!-- Add regions as options here -->
-                <option value="Europe">Europe</option>
-                <option value="Asia">Asia</option>
-                <option value="North America">North America</option>
-                <option value="South America">South America</option>
-                <option value="Africa">Africa</option>
-                <option value="Oceania">Oceania</option>
-            </select>
-            <select id="country-filter">
-                <option value="">All Countries</option>
-                <!-- Add countries as options here -->
-                <option value="United States">United States</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="Japan">Japan</option>
-                <option value="Australia">Australia</option>
-            </select>
-        </div>
-        <div id="card-container" class="card-container">
-            <!-- Airport cards will be inserted here by JavaScript -->
-        </div>
+        <header>
+            <h1>Airport List</h1>
+            <p>Explore airports compatible with A380</p>
+            <hr>
+        </header>
+        <div class="airport-list" id="airport-list"></div>
     </div>
-    <h4 style="bottom: 10px; text-align: center; position: fixed; left: 50%; transform: translate(-50%, -50%);">
-        By <a class="credits" href="https://github.com/KaiSimpson13123/">Kai Simpson</a>, 
-        <a class="credits" href="https://discord.gg/upV8wRKS9V">Discord</a>
-    </h4>
+
     <script src="list.js"></script>
 </body>
 </html>

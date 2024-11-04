@@ -30,7 +30,7 @@ header h1, header p {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     color: #4A90E2;
 }
 
@@ -88,32 +88,34 @@ button.card-button:hover {
 }
 
 .popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed positioning to cover the viewport */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    z-index: 1000; /* Ensures the popup is above other elements */
 }
 
 .popup-content {
-    background: #fff;
-    color: #333;
+    background: #fff; /* White background for the popup content */
+    color: #333; /* Text color */
     padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 400px;
-    margin: auto;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    max-width: 400px; /* Maximum width */
+    margin: auto; /* Centering */
 }
 
 .close {
-    cursor: pointer;
-    font-size: 20px;
-    float: right;
+    cursor: pointer; /* Pointer cursor for close button */
+    font-size: 20px; /* Close button font size */
+    float: right; /* Float right */
 }
+
 
 .button1 {
     top: 3px;

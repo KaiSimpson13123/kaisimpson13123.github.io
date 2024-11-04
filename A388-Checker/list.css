@@ -1,77 +1,118 @@
-body, html {
+/* Basic Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    overflow-x: hidden;
 }
 
+/* Container for the Cards */
 .container {
-    width: 90%;
-    margin: auto;
-    padding-top: 20px;
     max-width: 1200px;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    background-color: #f5f5f5;
+    margin: 0 auto;
     padding: 20px;
-    z-index: 10;
-}
-
-header h1, header p {
-    margin: 0;
     text-align: center;
 }
 
-.airport-list-container {
-    margin-top: 20px;
-    max-height: calc(100vh - 160px);
-    overflow-y: auto;
-    padding: 10px 0;
-}
-
-.airport-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px auto;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.airport-card:hover {
-    transform: scale(1.05);
-}
-
-.airport-name {
-    font-size: 1.2em;
+h1 {
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Grid Layout for Cards */
+.airports-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* General Card Styling */
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.4rem;
     margin: 10px 0;
+    color: #333;
 }
 
-.airport-icao {
-    font-size: 1em;
-    color: #555;
+.card p {
+    color: #666;
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
-button.card-button {
-    margin-top: 15px;
-    padding: 8px 16px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.card button {
+    padding: 10px 20px;
     background-color: #5cb85c;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.card button:hover {
+    background-color: #4cae4c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button.card-button:hover {
-    background-color: #4cae4c;
+/* Scroll Bar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Responsive Text Alignment for Small Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
 }

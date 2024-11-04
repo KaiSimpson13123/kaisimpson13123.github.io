@@ -26,7 +26,7 @@ function displayAirports(airports) {
         card.innerHTML = `
             <div class="airport-name">${airport}</div>
             <br>
-            <button class="card-button">View Gates</button>
+            <button id="viewbutton" class="card-button">View Gates</button>
         `;
         card.addEventListener('click', () => {
             viewGates(airport);

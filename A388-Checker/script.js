@@ -24,12 +24,12 @@ document.getElementById('check-button').addEventListener('click', function() {
                             ? `Compatible gates: ${compatibleGates}`
                             : "No gates with max size 'F' found.";
 
-                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>${gateInfo}<br><a href="https://www.ifatc.org/gates?code=${airportCode}" target="_blank" style="color: black;">Gate Info</a>`;
+                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>${gateInfo}`;
                         popup.style.display = 'flex';
                     })
                     .catch(error => {
                         console.error('Error fetching gate data:', error);
-                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve gate information.<br><a href="https://www.ifatc.org/gates?code=${airportCode}" target="_blank" style="color: black;">Gate Info</a>`;
+                        popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve gate information.`;
                         popup.style.display = 'flex';
                     });
             } else {

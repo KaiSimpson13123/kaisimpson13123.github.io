@@ -1,10 +1,9 @@
 {
-    "YMML": [
-        { "name": "Gate A1", "maxSize": "F" },
-        { "name": "Gate B2", "maxSize": "E" }
-    ],
     "YBBN": [
-        { "name": "Gate C3", "maxSize": "F" },
-        { "name": "Gate D4", "maxSize": "D" }
+        { "name": "Gate 71", "maxSize": "F" },
+        { "name": "Gate 72", "maxSize": "F" },
+        { "name": "Gate 73", "maxSize": "F" },
+        { "name": "Gate 74", "maxSize": "F" },
+        { "name": "Gate 76", "maxSize": "F" }
     ]
 }

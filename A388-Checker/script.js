@@ -11,10 +11,6 @@ function checkAirportCompatibility() {
     const airportCode = document.getElementById('airport-input').value.toUpperCase();
     const popupMessage = document.getElementById('popup-message');
     const popup = document.getElementById('popup');
-    const loadingIcon = document.getElementById('loading-icon');
-
-    // Show loading icon
-    loadingIcon.style.display = 'block';
 
     // Check if the airport is in the compatible list
     fetch('airports.txt')
@@ -49,36 +45,28 @@ function checkAirportCompatibility() {
                                     : "No gates with max size 'F' found.";
 
                                 popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br><br><span title="${airportCode}">${gateInfo}</span>`;
-                                popup.style.display = 'flex';
+                                popup.style.display = 'flex'; // Show the popup
                             })
                             .catch(error => {
                                 console.error('Error fetching gate data:', error);
                                 popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve gate information.`;
-                                popup.style.display = 'flex';
-                            })
-                            .finally(() => {
-                                // Hide loading icon when done
-                                loadingIcon.style.display = 'none';
+                                popup.style.display = 'flex'; // Show the popup
                             });
                     })
                     .catch(error => {
                         console.error('Error fetching manual gates:', error);
                         popupMessage.innerHTML = `The airport ${airportCode} is A380 <span style="color: #5cb85c;">compatible!</span><br>Could not retrieve manual gate information.`;
-                        popup.style.display = 'flex';
-                    })
-                    .finally(() => {
-                        // Hide loading icon when done
-                        loadingIcon.style.display = 'none';
+                        popup.style.display = 'flex'; // Show the popup
                     });
             } else {
                 popupMessage.innerHTML = `The airport "${airportCode}" is <span style="color: #ED4337;">NOT A380 compatible</span> or does not exist.`;
-                popup.style.display = 'flex';
-                loadingIcon.style.display = 'none'; // Hide loading icon if not compatible
+                popup.style.display = 'flex'; // Show the popup
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            loadingIcon.style.display = 'none'; // Hide loading icon on error
+            popupMessage.innerHTML = `An error occurred while checking the airport.`;
+            popup.style.display = 'flex'; // Show the popup
         });
 }
 

@@ -8,5 +8,9 @@
     ],
     "YPPH": [
         { "name": "T1 Gate 150", "maxSize": "F" }
+    ],
+    "YBAS": [
+        { "name": "Gate 26", "maxSize": "F" },
+        { "name": "Gate 28", "maxSize": "F" }
     ]
 }

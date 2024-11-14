@@ -1,0 +1,32 @@
+{
+    "YBBN": [
+        { "name": "Gate 71", "maxSize": "F" },
+        { "name": "Gate 72", "maxSize": "F" },
+        { "name": "Gate 73", "maxSize": "F" },
+        { "name": "Gate 74", "maxSize": "F" },
+        { "name": "Gate 76", "maxSize": "F" }
+    ],
+    "YPPH": [
+        { "name": "T1 Gate 150", "maxSize": "F" },
+        { "name": "T1 Gate 162", "maxSize": "F" },
+        { "name": "T1 Gate 163", "maxSize": "F" }
+    ],
+    "YBAS": [
+        { "name": "Gate 26", "maxSize": "F" },
+        { "name": "Gate 28", "maxSize": "F" }
+    ],
+    "YMML": [
+        { "name": "Gate D9", "maxSize": "F" },
+        { "name": "Gate D11", "maxSize": "F" },
+        { "name": "Gate D13", "maxSize": "F" },
+        { "name": "Gate D15", "maxSize": "F" },
+        { "name": "Gate D18B", "maxSize": "F" }
+    ],
+    "EFHK": [
+        { "name": "Gate W48", "maxSize": "F" },
+        { "name": "De-Icing Stand 815", "maxSize": "F" }
+    ],
+    "OMDB": [
+        { "name": "Maybe I should list where you can't park in Dubai...", "maxSize": "F" }
+    ]
+}

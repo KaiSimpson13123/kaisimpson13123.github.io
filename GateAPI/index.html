@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/KS.png" type="image/png">
+    <title>Gate API Documentation</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f7f8fc;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Content Styling */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4a90e2;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        /* Code block styling */
+        pre, code {
+            background-color: #eef2f7;
+            color: #333;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+
+        /* Example Box Styling */
+        .example {
+            background: #f0f7ff;
+            padding: 15px;
+            border-left: 4px solid #4a90e2;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+        }
+
+        /* Link Styling */
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Gate API Documentation</h1>
+    <p>Your guide to accessing gate data for aircraft spawning at VATSIM airports.</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>Introduction</h2>
+        <p>
+            The Gate API allows users to retrieve available gate data at airports to assist with aircraft spawn points.
+            The API is designed to support applications by providing information about suitable gates by airport code (ICAO).
+        </p>
+    </section>
+
+    <section>
+        <h2>Base URL</h2>
+        <p>
+            The base URL for accessing the Gate API is:
+        </p>
+        <pre>https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/[ICAO]</pre>
+        <br>
+        <p>
+            Replace <code>[ICAO]</code> with the 4-letter ICAO code of the airport you want to retrieve gate data for.
+        </p>
+    </section>
+
+    <section>
+        <h2>Example Request</h2>
+        <div class="example">
+            <p>To get gate information for Los Angeles International Airport (KLAX), use:</p>
+            <pre>https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/KLAX</pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Response Format</h2>
+        <p>
+            The API returns data in JSON format, structured with details about each gate's size and suitability for various aircraft.
+            Here’s an example response:
+        </p>
+        <pre>
+        {
+            "icao": "KLAX",
+                "gates": [
+                {
+                    "name": "American Airlines Maintenance Apron E06",
+                    "maxSize": "C"
+                },
+                {
+                    "name": "American Airlines Maintenance Apron E07",
+                    "maxSize": "C"
+                },
+                {
+                    "name": "American Airlines Maintenance Apron E08",
+                    "maxSize": "C"
+                }
+        }
+        </pre>
+        <br>
+        <p>
+            Each gate object includes the <code>gate</code> name and the <code>maxSize</code> it can accommodate.
+        </p>
+    </section>
+
+    <section>
+        <h2>Parameters</h2>
+        <p>The Gate API only requires one parameter:</p>
+        <ul>
+            <li><strong>ICAO</strong>: The 4-letter ICAO code of the airport you’re querying.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Error Handling</h2>
+        <p>If the requested ICAO code is invalid or not found, the API will return a JSON response with an error message:</p>
+        <pre>
+{
+  "error": "Airport not found."
+}
+        </pre>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kai Simpson, Gate API Documentation</p>
+</footer>
+
+</body>
+</html>

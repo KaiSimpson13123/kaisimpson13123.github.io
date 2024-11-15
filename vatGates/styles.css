@@ -366,3 +366,26 @@ body.dark-mode .slider:before {
 body.dark-mode #toggle-label {
   color: #f4f9fc; /* Lighter text color in dark mode */
 }
+
+/* Modal */
+body.dark-mode .modal {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay background */
+}
+
+/* Modal content */
+body.dark-mode .modal-content {
+  background-color: #333; /* Dark background for modal content */
+  color: #f4f9fc; /* Light text color */
+  border: 1px solid #555; /* Darker border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+/* Close button */
+body.dark-mode .close {
+  color: #f4f9fc; /* Light color for the close button */
+}
+
+body.dark-mode .close:hover,
+body.dark-mode .close:focus {
+  color: #fff; /* Bright white color on hover/focus */
+}

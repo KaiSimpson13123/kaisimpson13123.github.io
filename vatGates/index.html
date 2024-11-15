@@ -19,9 +19,20 @@
 
       gtag('config', 'G-PRCF816586');
     </script>
+
+    <!-- Dark Mode Toggle -->
+  <div class="toggle-container" id="theme-toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <span id="toggle-label">Dark Mode</span>
+    <button id="dark-mode-toggle" class="dark-mode-toggle">🌞</button>
+  </div>
+
   <div class="container">
-    <h1 style="color: black;font-size: 60px;">vatGates</h1>
-    <h1 style="color: black;font-size: 20px;">By Kai Simpson</h1>
+    <h1 style="font-size: 60px;">vatGates</h1>
+    <h1 style="font-size: 20px;">By Kai Simpson</h1>
     <form id="gate-form">
       <label for="icao-input">Airport Code:</label>
       <input type="text" id="icao-input" placeholder="Enter Airport (ICAO)" required maxlength="4">

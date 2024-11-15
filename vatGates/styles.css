@@ -24,9 +24,9 @@ body {
   font-size: 1rem;
 }
 
-h1 {
+h1, #kai-text {
   text-align: center;
-  color: #2f4f4f;
+  color: #000000;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
@@ -170,7 +170,7 @@ button:disabled:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #fff;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -183,7 +183,7 @@ button:disabled:hover {
   border-radius: 50%;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #fff;
   transition: 0.4s;
 }
 
@@ -199,4 +199,94 @@ input:checked + .slider:before {
   color: #333;
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+/* General Styles for Dark Mode */
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #f4f9fc; /* Dark mode text color */
+}
+
+body.dark-mode .container {
+  background-color: #333;
+  color: #f4f9fc;
+}
+
+body.dark-mode .gate-card {
+  background-color: #444;
+  color: #f4f9fc;
+}
+
+body.dark-mode input, body.dark-mode button {
+  background-color: #555;
+  color: #f4f9fc;
+  border-color: #666;
+}
+
+body.dark-mode input:focus, body.dark-mode button:hover {
+  background-color: #666;
+  border-color: #777;
+}
+
+body.dark-mode #gate-form button {
+  background-color: #66bb6a;
+}
+
+body.dark-mode .toggle-container {
+  background-color: #333;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #toggle-label {
+  color: #f4f9fc;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;  /* Adjust the distance from the top */
+  left: 10px; /* Adjust the distance from the left */
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 9999;
+  padding: 10px;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.7;
+}
+
+.container.dark-mode {
+  background-color: #1e1e1e; /* Dark mode container background */
+  color: #f4f9fc; /* Dark mode text color */
+}
+
+button.dark-mode {
+  background-color: #333; /* Dark mode button background */
+  color: #f4f9fc; /* Dark mode button text color */
+}
+
+input.dark-mode, button.dark-mode {
+  background-color: #333; /* Dark mode input background */
+  color: #f4f9fc; /* Dark mode input text */
+}
+
+.gate-card.dark-mode {
+  background-color: #333; /* Dark mode gate card background */
+  color: #f4f9fc; /* Dark mode gate card text color */
+}
+
+.gate-card.dark-mode {
+  background-color: #333; /* Dark mode background */
+  color: #f4f9fc; /* Dark mode text color */
+}
+
+.gate-card h3, .gate-card p {
+  color: inherit; /* Ensure text inherits the color from the gate-card container */
+}
+
+body.dark-mode h1, body.dark-mode #kai-text {
+  color: #f4f9fc; /* Dark mode text color */
 }

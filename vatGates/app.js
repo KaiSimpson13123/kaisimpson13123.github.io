@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const aircraftInput = document.getElementById('aircraft-input');
   const showAllToggle = document.getElementById('show-all-toggle');
   const toggleLabel = document.getElementById('toggle-label');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
 
   gateForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -96,4 +97,29 @@ document.addEventListener('DOMContentLoaded', function () {
           gateContainer.appendChild(gateCard);
       });
   }
+
+  // Dark Mode Toggle Functionality
+  function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      localStorage.setItem('dark-mode', isDarkMode);
+      updateDarkModeIcon(isDarkMode);
+  }
+
+  function updateDarkModeIcon(isDarkMode) {
+      const icon = isDarkMode ? '🌙' : '🌞';
+      darkModeToggle.innerHTML = icon;
+  }
+
+  // Check if dark mode was saved in localStorage
+  const savedDarkMode = localStorage.getItem('dark-mode') === 'true';
+  if (savedDarkMode) {
+      document.body.classList.add('dark-mode');
+      updateDarkModeIcon(true);
+  } else {
+      updateDarkModeIcon(false);
+  }
+
+  // Event listener for the dark mode toggle button
+  darkModeToggle.addEventListener('click', toggleDarkMode);
 });

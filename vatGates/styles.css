@@ -290,3 +290,11 @@ input.dark-mode, button.dark-mode {
 body.dark-mode h1, body.dark-mode #kai-text {
   color: #f4f9fc; /* Dark mode text color */
 }
+
+label {
+  color: #333; /* Dark color for labels in light mode */
+}
+
+body.dark-mode label {
+  color: #f4f9fc; /* Light color for labels in dark mode */
+}

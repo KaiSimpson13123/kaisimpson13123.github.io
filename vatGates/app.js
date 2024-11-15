@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
           })
           .catch(err => {
               console.error('Error fetching gate data:', err);
-              swal("Error", "An error has occurred when fetching gate data. Please try again later.", "error");
+              swal("Error", "An error has occurred when fetching gate data. Please try again later. Submit Error: https://shorturl.at/i2HAU", "error");
           });
   }
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const maxClass = aircraftData[aircraftType];
       if (!maxClass) {
-          swal("Error", "Invalid Aircraft Type!", "error");
+          swal("Error", "Invalid Aircraft Type! Submit Error: https://shorturl.at/i2HAU", "error");
           return;
       }
 
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (randomGate) {
               displayRandomGate(randomGate);  // Display the random gate in the modal
           } else {
-              swal("Error", "No available gates for this aircraft at the selected airport.", "error");
+              swal("Error", "No available gates for this aircraft at the selected airport. Submit Error: https://shorturl.at/i2HAU", "error");
           }
       } else {
           // Display all available gates

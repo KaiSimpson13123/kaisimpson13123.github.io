@@ -41,9 +41,20 @@
       <input type="text" id="aircraft-input" placeholder="Enter Aircraft Type" required maxlength="4">
 
       <button type="submit">Find Gates</button>
+      <button type="button">Pick Random</button>
     </form>
 
     <div id="gates-container" class="gates-container"></div>
+
+    <div id="random-gate-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Random Gate</h3>
+        <p id="random-gate-name"></p>
+        <p id="random-gate-size"></p>
+        <p id="random-gate-location"></p> <!-- Add any other gate details here -->
+      </div>
+    </div>
 
     <!-- Toggle Switch -->
     <div class="toggle-container">

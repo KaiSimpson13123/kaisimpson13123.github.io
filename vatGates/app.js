@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleLabel = document.getElementById('toggle-label');
   const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-  gateForm.addEventListener('submit', function(event) {
+  gateForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
       const icao = icaoInput.value.trim().toUpperCase();
@@ -17,7 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
       }
 
-      fetchGates(icao, aircraftType);
+      fetchGates(icao, aircraftType, false);  // Pass false for normal gate search
+  });
+
+  const randomButton = document.querySelector('button[type="button"]'); // "Pick Random" button
+  randomButton.addEventListener('click', function () {
+      const icao = icaoInput.value.trim().toUpperCase();
+      const aircraftType = aircraftInput.value.trim().toUpperCase();
+
+      if (!icao || !aircraftType) {
+          swal("Error", "Please enter both airport and aircraft.", "error");
+          return;
+      }
+
+      fetchGates(icao, aircraftType, true);  // Pass true for random gate search
   });
 
   loadJsonData();
@@ -40,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
           .catch(err => console.error('Error loading manual gates:', err));
   }
 
-  function fetchGates(icao, aircraftType) {
+  function fetchGates(icao, aircraftType, isRandom) {
       const apiUrl = `https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${icao}`;
-      
+
       fetch(apiUrl)
           .then(response => response.json())
           .then(data => {
@@ -50,17 +63,17 @@ document.addEventListener('DOMContentLoaded', function () {
               const manualGatesForIcao = manualGates[icao] || [];
               const allGates = [...apiGates, ...manualGatesForIcao];
 
-              filterGates(allGates, icao, aircraftType, manualGatesForIcao);
+              filterGates(allGates, icao, aircraftType, manualGatesForIcao, isRandom);
           })
           .catch(err => {
               console.error('Error fetching gate data:', err);
-              swal("Error", "An error has occured when fetching gate data. Please try again later.", "error");
+              swal("Error", "An error has occurred when fetching gate data. Please try again later.", "error");
           });
   }
 
-  function filterGates(gates, icao, aircraftType, manualGatesForIcao) {
+  function filterGates(gates, icao, aircraftType, manualGatesForIcao, isRandom) {
       const gateContainer = document.getElementById('gates-container');
-      gateContainer.innerHTML = '';
+      gateContainer.innerHTML = ''; // Clear previous gate results
 
       const maxClass = aircraftData[aircraftType];
       if (!maxClass) {
@@ -82,20 +95,53 @@ document.addEventListener('DOMContentLoaded', function () {
           return showAll ? gate.maxSize >= maxClass : gate.maxSize === maxClass;
       });
 
-      if (availableGates.length === 0) {
-          gateContainer.innerHTML = 'No available gates for this aircraft at the selected airport.';
-          return;
-      }
+      if (isRandom) {
+          // Pick a random gate from the available gates
+          const randomGate = availableGates[Math.floor(Math.random() * availableGates.length)];
+          if (randomGate) {
+              displayRandomGate(randomGate);  // Display the random gate in the modal
+          } else {
+              swal("Error", "No available gates for this aircraft at the selected airport.", "error");
+          }
+      } else {
+          // Display all available gates
+          if (availableGates.length === 0) {
+              gateContainer.innerHTML = 'No available gates for this aircraft at the selected airport.';
+              return;
+          }
 
-      availableGates.forEach(gate => {
-          const gateCard = document.createElement('div');
-          gateCard.classList.add('gate-card');
-          gateCard.innerHTML = `
-              <h3>${gate.name}</h3>
-              <p>Max Size: Class ${gate.maxSize}</p>
-          `;
-          gateContainer.appendChild(gateCard);
-      });
+          availableGates.forEach(gate => {
+              displayGate(gate);  // Display gates normally in the list
+          });
+      }
+  }
+
+  // Function to display a random gate in the modal
+  function displayRandomGate(gate) {
+      const modal = document.getElementById('random-gate-modal');
+      const gateName = document.getElementById('random-gate-name');
+      const gateSize = document.getElementById('random-gate-size');
+      const gateLocation = document.getElementById('random-gate-location');
+
+      // Set modal content
+      gateName.textContent = `Gate: ${gate.name}`;
+      gateSize.textContent = `Max Size: Class ${gate.maxSize}`;
+
+      // Show the modal
+      modal.style.display = "block";
+  }
+
+  // Function to display gates normally in the list
+  function displayGate(gate) {
+      const gateContainer = document.getElementById('gates-container');
+
+      const gateCard = document.createElement('div');
+      gateCard.classList.add('gate-card');
+      gateCard.innerHTML = `
+          <h3>${gate.name}</h3>
+          <p>Max Size: Class ${gate.maxSize}</p>
+      `;
+      gateContainer.appendChild(gateCard);
   }
 
   // Dark Mode Toggle Functionality
@@ -122,4 +168,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Event listener for the dark mode toggle button
   darkModeToggle.addEventListener('click', toggleDarkMode);
+
+  // Modal close functionality
+  document.querySelector('.close').addEventListener('click', function () {
+      document.getElementById('random-gate-modal').style.display = "none";
+  });
+
+  // Close the modal when clicking anywhere outside the modal
+  window.addEventListener('click', function (event) {
+      const modal = document.getElementById('random-gate-modal');
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
 });

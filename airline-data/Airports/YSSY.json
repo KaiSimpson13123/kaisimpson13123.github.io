@@ -1,0 +1,6 @@
+{
+    "Qantas": ["Terminal 3 (Gates D1 - D18) & Terminal 1 (I8 - I10, I24 & I25)"],
+    "Virgin Australia, Jetstar, Rex": ["Terminal 2 (Gates D19 - D59)"],
+    "International Airlines": ["Terminal 1 (Gates I8 - I63)"],
+    "Cargo": ["C1 - C6"]
+}

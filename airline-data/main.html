@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Data</title>
+    <link rel="icon" type="image/png" href="../assets/KS.png" />
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRCF816586"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PRCF816586');
+    </script>
+    <div class="container" id="start">
+        <header>
+            <h1>Airline Gate Data</h1>
+            <p>Find where airlines park at supported airports.</p>
+            <br>
+            <hr>
+        </header>
+        <div class="search-area">
+            <input id="airport-input" type="text" placeholder="Search by Airport ICAO..." />
+            <button id="check-button" type="button">Check</button>
+        </div>
+        <div id="loading-icon" class="loading-icon" style="display: none;"></div>
+    </div>
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-button">&times;</span>
+            <div id="popup-message"></div>
+        </div>
+    </div>
+
+    <h4 style="bottom: 10px;text-align: center;position: fixed;left: 50%;transform: translate(-50%, -50%);">By <a class="credits" href="https://github.com/KaiSimpson13123/">Kai Simpson</a>, <a class="credits" href="https://discord.gg/upV8wRKS9V">Discord</a></h4>
+
+    <script src="script.js"></script>
+</body>
+</html>

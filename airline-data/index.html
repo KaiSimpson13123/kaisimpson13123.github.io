@@ -28,14 +28,13 @@
 
     <script>
         (function securePrompt() {
-            // Obfuscated password (basic example)
+            // This isn't meant to be a "OMG I HACKED YOU" moment, its just to have some what of security, so go on, "hack" me
             const _key = atob("aWxpa2VwbGFuZXM=");
 
-            // Prompt until the correct password is entered
             while (true) {
                 let userInput = prompt("Enter the password:");
                 if (userInput === _key) {
-                    // Redirect to the main page upon success
+                    
                     window.location.href = "main.html";
                     break;
                 } else {

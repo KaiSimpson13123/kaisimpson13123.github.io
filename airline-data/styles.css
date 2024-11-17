@@ -148,7 +148,7 @@ p {
     width: 50px;
     height: 50px;
     margin: 0 auto;
-    background-image: url('loading.gif'); /* Add a loading gif here */
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sitepoint.com%2Fcommunity%2Ft%2Fneed-help-with-a-gif%2F366657&psig=AOvVaw33zlE_PQDv_WwV6diDHcwF&ust=1731937079055000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKCT78S-44kDFQAAAAAdAAAAABAE');
     background-size: cover;
     display: none;
 }
@@ -247,4 +247,16 @@ p {
   
   .closebtn:hover {
     color: black;
+    transform: scale(1.5);
+  }
+
+  .airport-in-warn {
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+
+  .airport-in-warn:hover {
+    color: black;
+    cursor: pointer;
   }

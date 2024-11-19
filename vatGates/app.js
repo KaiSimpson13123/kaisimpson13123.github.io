@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
       }
 
-      fetchGates(icao, aircraftType, false);  // Pass false for normal gate search
+      fetchGates(icao, aircraftType, false);
   });
 
-  const randomButton = document.querySelector('button[type="button"]'); // "Pick Random" button
+  const randomButton = document.querySelector('button[type="button"]');
   randomButton.addEventListener('click', function () {
       const icao = icaoInput.value.trim().toUpperCase();
       const aircraftType = aircraftInput.value.trim().toUpperCase();
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
       }
 
-      fetchGates(icao, aircraftType, true);  // Pass true for random gate search
+      fetchGates(icao, aircraftType, true);
   });
 
   loadJsonData();
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function filterGates(gates, icao, aircraftType, manualGatesForIcao, isRandom) {
       const gateContainer = document.getElementById('gates-container');
-      gateContainer.innerHTML = ''; // Clear previous gate results
+      gateContainer.innerHTML = '';
 
       const maxClass = aircraftData[aircraftType];
       if (!maxClass) {
@@ -86,20 +86,20 @@ document.addEventListener('DOMContentLoaded', function () {
       const availableGates = gates.filter(gate => {
           const isManualGate = manualGatesForIcao.some(manualGate => manualGate.name === gate.name);
 
-          // Manual gates should always be included
+          
           if (isManualGate) {
               return true;
           }
 
-          // Apply max size condition based on toggle switch
+          
           return showAll ? gate.maxSize >= maxClass : gate.maxSize === maxClass;
       });
 
       if (isRandom) {
-          // Pick a random gate from the available gates
+          
           const randomGate = availableGates[Math.floor(Math.random() * availableGates.length)];
           if (randomGate) {
-              displayRandomGate(randomGate);  // Display the random gate in the modal
+              displayRandomGate(randomGate); 
           } else {
               swal("Error", "No available gates for this aircraft at the selected airport. Submit Error: https://shorturl.at/i2HAU", "error");
           }

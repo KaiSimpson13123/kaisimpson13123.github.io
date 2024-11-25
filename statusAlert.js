@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         font-size: medium;
         z-index: 9999999;
         display: none;
+        border-radius: 10px;
       }
       .closebtn {
         margin-left: 15px;

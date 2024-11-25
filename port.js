@@ -6,7 +6,7 @@ const checkMaintenanceStatus = async () => {
     const { down } = data.status || {};
 
     if (down) {
-      window.location.href = "/other/down.html";
+      window.location.href = "/down";
     }
   } catch (error) {
     console.error("Error checking maintenance status:", error);

@@ -40,7 +40,7 @@
         padding: 20px;
         background-color: #f44336;
         color: white;
-        display: none;
+        
       }
 
       .closebtn {
@@ -108,7 +108,6 @@
           // Check if "warn" is true
           if (data.status.warn) {
             alertElement.style.display = "block"; // Show the alert
-            alertElement.textContent = "Warning: An outage is approaching. Please prepare accordingly!";
           } else {
             alertElement.style.display = "none"; // Hide the alert
           }

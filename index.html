@@ -91,10 +91,34 @@
   </head>
   <body>
 
-    <div class="alert">
+    <div class="alert" id="outage">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-      <strong>Alert!</strong> Planned Outage Approaching: 26/11/24 - 1030 UTC
+      <span><strong>Alert!</strong> Planned Outage Approaching: 26/11/24 - 1030 UTC</span>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const alertElement = document.getElementById("outage"); // Assume there's an HTML element with this ID for the alert
+
+        try {
+          // Fetch the status from the /status endpoint
+          const response = await fetch("http://admin.kaisimpson.xyz/status");
+          const data = await response.json();
+
+          // Check if "warn" is true
+          if (data.status.warn) {
+            alertElement.style.display = "block"; // Show the alert
+            alertElement.textContent = "Warning: An outage is approaching. Please prepare accordingly!";
+          } else {
+            alertElement.style.display = "none"; // Hide the alert
+          }
+        } catch (error) {
+          console.error("Error fetching status:", error);
+        }
+      });
+
+    </script>
+    
     
     <!-- Hero Section -->
     <div id="hero">

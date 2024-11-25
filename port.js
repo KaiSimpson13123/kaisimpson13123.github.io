@@ -17,4 +17,4 @@ const checkMaintenanceStatus = async () => {
 checkMaintenanceStatus();
 
 // Run every 10 seconds
-setInterval(checkMaintenanceStatus, 10000);
+setInterval(checkMaintenanceStatus, 1000);

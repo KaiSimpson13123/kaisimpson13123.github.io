@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vatFreq</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/KS.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>VATSIM Frequency Count Lookup</h1>
+        <h3>Quickly check how many people are using a frequency and see who they are.</h3>
+        <br>
+        <div class="search-box">
+            <input type="text" id="frequencyInput" maxlength="5" pattern="^\d*\.?\d*$" placeholder="Enter Frequency">
+            <button onclick="searchFrequency()" id="searchButton">Search</button>
+        </div>
+    </div>
+
+    <div id="resultPopup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="resultTitle"></h2>
+            <button id="viewListBtn" class="hidden" onclick="viewList()">View List</button>
+
+            <!-- Scrollable list container -->
+            <div id="scrollableList" class="scrollable-list hidden">
+                <ul id="scrollList"></ul>
+            </div>
+            <!-- "Scroll to see more" message -->
+            <p id="moreMessage" class="hidden">Scroll to see more callsigns or close the popup.</p>
+        </div>
+    </div>
+
+    <h5 style="text-align: center;position: fixed;bottom: 3px;">By <a style="color: black;text-decoration: none;" href="../">Kai S</a></h5>
+
+    <script src="script.js"></script>
+</body>
+</html>

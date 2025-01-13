@@ -30,7 +30,7 @@ function checkAirportCompatibility() {
                         const compatibleManualGates = manualGatesList.filter(gate => gate.maxSize === 'F');
 
                         // Fetch gate data from the API for the compatible airport
-                        fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airportCode}`)
+                        fetch(`https://gateapi.fly.dev/GateAPI/${airportCode}`)
                             .then(response => response.json())
                             .then(apiData => {
                                 const compatibleApiGates = apiData.gates

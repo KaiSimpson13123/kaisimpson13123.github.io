@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function fetchGates(icao, aircraftType, isRandom) {
-      const apiUrl = `https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${icao}`;
+      const apiUrl = `https://gateapi.fly.dev/GateAPI/${icao}`;
 
       fetch(apiUrl)
           .then(response => response.json())

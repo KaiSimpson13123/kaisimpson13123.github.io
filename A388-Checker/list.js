@@ -38,7 +38,7 @@ function displayAirports(airports) {
 function viewGates(airport) {
     Promise.all([
         fetch('manualGates.json').then(res => res.json()).catch(() => ({})), // Fetch manual gates
-        fetch(`https://kaicors-6abf9658da78.herokuapp.com/https://gateapi-ae6bb7ff61e6.herokuapp.com/GateAPI/${airport}`).then(res => res.json()).catch(() => ({ gates: [] })), // Fetch gates from API
+        fetch(`https://gateapi.fly.dev/GateAPI/${airport}`).then(res => res.json()).catch(() => ({ gates: [] })), // Fetch gates from API
         fetch('deletedGates.json').then(res => res.json()).catch(() => ({})) // Fetch deleted gates
     ])
     .then(([manualGatesData, apiGatesData, deletedGatesData]) => {

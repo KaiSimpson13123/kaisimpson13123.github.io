@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.0/dist/sweetalert2.min.js"></script>
+    <link rel="icon" type="image/png" href="../assets/KS.png" />
+    <title>Scenario Viewer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e2e3e5);
+            padding: 30px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 5px solid #2980b9;
+            text-align: left;
+        }
+        .aircraft {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .bold {
+            font-weight: bold;
+        }
+        select {
+            border-radius: 8px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            font-size: 1rem;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+        .preformatted {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scenario Viewer</h1>
+        <select id="scenarioSelect">
+            <option value="">Select Scenario</option>
+        </select>
+        <br><br>
+        <div id="content"></div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("https://raw.githubusercontent.com/vatpac-technology/simulator-scenarios/refs/heads/main/ScenarioFiles.xml")
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data, "text/xml");
+                    loadScenarios(xml);
+                })
+                .catch(error => console.error("Error fetching XML:", error));
+        });
+
+        function loadScenarios(xml) {
+            const scenarios = xml.querySelectorAll("ScenarioFile");
+            const scenarioSelect = document.getElementById("scenarioSelect");
+            scenarioSelect.innerHTML = '<option value="">Select Scenario</option>';
+
+            scenarios.forEach((scenario, index) => {
+                const option = document.createElement("option");
+                option.value = index;
+                option.textContent = scenario.querySelector("Name").textContent || `Scenario ${index + 1}`;
+                scenarioSelect.appendChild(option);
+            });
+
+            scenarioSelect.addEventListener("change", function() {
+                const selectedIndex = scenarioSelect.value;
+                if (selectedIndex !== "") {
+                    displayScenario(scenarios[selectedIndex]);
+                }
+            });
+        }
+
+        function displayScenario(scenario) {
+            const content = document.getElementById("content");
+            content.innerHTML = `<div class='section' style='text-align: center;'>
+                <h1 class="bold">${scenario.querySelector("Name").textContent}</h1>
+                <h3 class="bold">${scenario.querySelector("Type").textContent}</h3>
+            </div>`;
+            
+            const briefing = scenario.querySelector("StudentBriefing");
+            if (briefing) {
+                content.innerHTML += `<div class='section'>
+                    <h2>Student Briefing</h2>
+                    <p class='preformatted'>${briefing.textContent}</p>
+                </div>`;
+            }
+            
+            const notes = scenario.querySelector("InstructorNotes");
+            if (notes) {
+                content.innerHTML += `<div class='section'>
+                    <h2>Instructor Notes</h2>
+                    <p class='preformatted'>${notes.textContent}</p>
+                </div>`;
+            }
+            
+            const aircrafts = scenario.querySelectorAll("Aircraft");
+            if (aircrafts.length > 0) {
+                let aircraftHTML = `<div class='section'>
+                    <h2>Aircraft Targets</h2>`;
+                aircrafts.forEach(ac => {
+                    const position = ac.querySelector("Position");
+                    const flightPlan = ac.querySelector("FlightPlan");
+                    
+                    aircraftHTML += `<div class='aircraft'>
+                        <p><span class='bold'>Callsign:</span> ${ac.getAttribute("Callsign")} (${ac.getAttribute("Type")})</p>
+                        <p><span class='bold'>Squawk:</span> ${ac.querySelector("Squawk").getAttribute("Code")}</p>
+                        <p><span class='bold'>Position:</span> Lat ${position.getAttribute("Latitude")}, Lon ${position.getAttribute("Longitude")}</p>
+                        <p><span class='bold'>Speed:</span> ${position.getAttribute("Speed")} knots</p>
+                        <p><span class='bold'>Altitude:</span> ${position.getAttribute("Altitude")} ft</p>
+                        <p><span class='bold'>Departure:</span> ${flightPlan.getAttribute("Departure")} → ${flightPlan.getAttribute("Destination")}</p>
+                        <p><span class='bold'>Route:</span> ${flightPlan.textContent.trim()}</p>
+                    </div>`;
+                });
+                aircraftHTML += `</div>`;
+                content.innerHTML += aircraftHTML;
+            }
+        }
+    </script>
+</body>
+</html>

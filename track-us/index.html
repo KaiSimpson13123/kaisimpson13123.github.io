@@ -103,7 +103,7 @@
                     <i class="icon ${icon} ${statusClass}"></i>
                     <a target="_blank" style="text-decoration: none;color: white;" href="https://vatsim-radar.com/?pilot=${pilot.cid}"><span class="link"><h2>${pilot.name || "Unknown"} (${pilot.callsign || "N/A"})</h2></span></a>
                     <p class="status ${statusClass}">${statusText}</p>
-                    ${!pilot.offline ? `<p>From: ${pilot.flight_plan?.departure || "Unknown"} → To: ${pilot.flight_plan?.arrival || "Unknown"}</p>
+                    ${!pilot.offline ? `<p>${pilot.flight_plan?.departure || "Unknown"} → ${pilot.flight_plan?.arrival || "Unknown"}</p>
                     <p>Altitude: ${pilot.altitude} ft</p>
                     <p>Speed: ${pilot.groundspeed} knots</p>` : ""}
                 `;

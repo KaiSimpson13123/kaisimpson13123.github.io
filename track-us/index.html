@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VATSIM Flight Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1e1e2e;
+            color: white;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+        .pilot {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+        .pilot:hover {
+            transform: scale(1.05);
+        }
+        .divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%);
+}
+        .pilot:last-child .divider {
+            display: none;
+        }
+        .status {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .online {
+            color: #2ecc71;
+        }
+        .offline {
+            color: #e74c3c;
+        }
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .link {
+            color: white;
+            transition: 0.25s;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="pilot1" class="pilot"></div>
+        <div class="divider"></div>
+        <div id="pilot2" class="pilot"></div>
+    </div>
+    
+
+    <script>
+        const VATSIM_API_URL = "https://data.vatsim.net/v3/vatsim-data.json";
+        const TARGET_CIDS = [1777823, 1654202];
+
+        async function fetchPilots() {
+            try {
+                const response = await fetch(VATSIM_API_URL);
+                const data = await response.json();
+                const pilots = TARGET_CIDS.map(cid => data.pilots.find(pilot => pilot.cid === cid) || { cid, offline: true });
+                displayPilots(pilots);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        function displayPilots(pilots) {
+            pilots.forEach((pilot, index) => {
+                const pilotDiv = document.getElementById(`pilot${index + 1}`);
+                const statusClass = pilot.offline ? "offline" : "online";
+                const statusText = pilot.offline ? "Offline" : "Flying";
+                const icon = pilot.offline ? "fas fa-plane-slash" : "fas fa-plane";
+                pilotDiv.innerHTML = `
+                    <i class="icon ${icon} ${statusClass}"></i>
+                    <a target="_blank" style="text-decoration: none;color: white;" href="https://vatsim-radar.com/?pilot=${pilot.cid}"><span class="link"><h2>${pilot.name || "Unknown"} (${pilot.callsign || "N/A"})</h2></span></a>
+                    <p class="status ${statusClass}">${statusText}</p>
+                    ${!pilot.offline ? `<p>From: ${pilot.flight_plan?.departure || "Unknown"} → To: ${pilot.flight_plan?.arrival || "Unknown"}</p>
+                    <p>Altitude: ${pilot.altitude} ft</p>
+                    <p>Speed: ${pilot.groundspeed} knots</p>` : ""}
+                `;
+            });
+        }
+
+        fetchPilots();
+        setInterval(fetchPilots, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pellson Work Equation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 12px;
+    }
+    input, button, select {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pellson Work Equation</h2>
+
+  <label for="calcType">Choose Calculation Type:</label>
+  <select id="calcType" onchange="updateForm()">
+    <option value="percentage">Calculate Percentage Worked</option>
+    <option value="customersPerHour">Calculate Customers Per Hour from Percentage</option>
+  </select>
+
+  <div id="inputFields">
+    <!-- These inputs will change dynamically -->
+  </div>
+
+  <button onclick="performCalculation()">Calculate</button>
+  <h3 id="result"></h3>
+
+  <script>
+    function updateForm() {
+      const type = document.getElementById('calcType').value;
+      const inputFields = document.getElementById('inputFields');
+      let html = '';
+
+      if (type === 'percentage') {
+        html += `
+          <label>Customers Served:</label>
+          <input type="number" id="customers" placeholder="e.g. 40">
+
+          <label>Time Worked (hours):</label>
+          <input type="number" id="time" placeholder="e.g. 8">
+
+          <label>Wage ($/hour):</label>
+          <input type="number" id="wage" placeholder="e.g. 20">
+        `;
+      } else if (type === 'customersPerHour') {
+        html += `
+          <label>Target Percentage Worked (%):</label>
+          <input type="number" id="targetPercentage" placeholder="e.g. 75">
+
+          <label>Time Worked (hours):</label>
+          <input type="number" id="time" placeholder="e.g. 8">
+
+          <label>Wage ($/hour):</label>
+          <input type="number" id="wage" placeholder="e.g. 20">
+        `;
+      }
+
+      inputFields.innerHTML = html;
+      document.getElementById('result').innerText = '';
+    }
+
+    function performCalculation() {
+      const type = document.getElementById('calcType').value;
+      const time = parseFloat(document.getElementById('time').value);
+      const wage = parseFloat(document.getElementById('wage').value);
+
+      if (isNaN(time) || isNaN(wage) || time <= 0 || wage <= 0) {
+        document.getElementById('result').innerText = "Please enter valid numbers.";
+        return;
+      }
+
+      if (type === 'percentage') {
+        const customers = parseFloat(document.getElementById('customers').value);
+        if (isNaN(customers) || customers < 0) {
+          document.getElementById('result').innerText = "Please enter valid customer count.";
+          return;
+        }
+
+        const percentageWorked = (customers / (time * time * wage)) * 100;
+        document.getElementById('result').innerText = `Percentage Worked: ${percentageWorked.toFixed(2)}%`;
+
+      } else if (type === 'customersPerHour') {
+        const targetPercentage = parseFloat(document.getElementById('targetPercentage').value);
+        if (isNaN(targetPercentage) || targetPercentage < 0) {
+          document.getElementById('result').innerText = "Please enter a valid percentage.";
+          return;
+        }
+
+        const customersPerHour = (targetPercentage * time * wage) / 100;
+        document.getElementById('result').innerText = `Required Customers per Hour: ${customersPerHour.toFixed(2)}`;
+      }
+    }
+
+    // Initialize the form on first load
+    updateForm();
+  </script>
+
+</body>
+</html>

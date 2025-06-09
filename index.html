@@ -1,385 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Pellson Work Equation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 12px;
+    }
+    input, button, select {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
 
-    <title>Kai | Developer</title>
+  <h2>Pellson Work Equation</h2>
 
-    <meta name="keywords" content="kai, Kai Simpson, javascript, Kaisimpson, web developer, VATPAC, VATSIM" />
+  <label for="calcType">Choose Calculation Type:</label>
+  <select id="calcType" onchange="updateForm()">
+    <option value="percentage">Calculate Percentage Worked</option>
+    <option value="customersPerHour">Calculate Customers Per Hour from Percentage</option>
+  </select>
 
-    <meta name="description" content="Kai Simpson | Developer" />
+  <div id="inputFields">
+    <!-- These inputs will change dynamically -->
+  </div>
 
-    <link rel="icon" type="image/png" href="./assets/KS.png" />
+  <button onclick="performCalculation()">Calculate</button>
+  <h3 id="result"></h3>
 
-    <meta name="theme-color" content="#36d1dc" />
+  <script>
+    function updateForm() {
+      const type = document.getElementById('calcType').value;
+      const inputFields = document.getElementById('inputFields');
+      let html = '';
 
-    <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
-    <meta property="og:url" content="http://kaisimpson.xyz/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="Kai Simpson | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Kai's Developer Profile" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail -->
+      if (type === 'percentage') {
+        html += `
+          <label>Customers Served:</label>
+          <input type="number" id="customers" placeholder="e.g. 40">
 
-    <meta
-      property="og:image"
-      content="https://github.com/KaiSimpson13123/kaisimpson13123.github.io/blob/main/assets/home.png?raw=true"
-    />
+          <label>Time Worked (hours):</label>
+          <input type="number" id="time" placeholder="e.g. 8">
 
-    <!--Alert Default Hidden-->
-    <script src="statusAlert.js"></script>
+          <label>Wage ($/hour):</label>
+          <input type="number" id="wage" placeholder="e.g. 20">
+        `;
+      } else if (type === 'customersPerHour') {
+        html += `
+          <label>Target Percentage Worked (%):</label>
+          <input type="number" id="targetPercentage" placeholder="e.g. 75">
 
-    <!-- link tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+          <label>Time Worked (hours):</label>
+          <input type="number" id="time" placeholder="e.g. 8">
 
-    <!-- FontAwesome Icons link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script defer src="./javascript/scrollreveal.min.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="./javascript/scrollveal.js"
-    ></script>
+          <label>Wage ($/hour):</label>
+          <input type="number" id="wage" placeholder="e.g. 20">
+        `;
+      }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRCF816586"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      inputFields.innerHTML = html;
+      document.getElementById('result').innerText = '';
+    }
 
-      gtag('config', 'G-PRCF816586');
-    </script>
-    <!-- End of Google Analytics -->
-  </head>
-  <body>
-    
-    
-    <!-- Hero Section -->
-    <div id="hero">
-      <section class="container">
-        <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name"><u style="text-decoration-color: #36d1dc;">Kai,</u></span>
-          <br />
-          <span style="color: gray;font-size: 40px;">Web Developer</span>
-        </h1>
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#contact">Get in touch</a>
-        </p>
-      </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
-    </div>
-    <!-- /END Hero Section -->
+    function performCalculation() {
+      const type = document.getElementById('calcType').value;
+      const time = parseFloat(document.getElementById('time').value);
+      const wage = parseFloat(document.getElementById('wage').value);
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title"><u>About Me</u></h2>
-        <div class="row about-wrapper">
-          <div class="about-wrapper__image">
-            <img
-              class="img-fluid"
-              src="./assets/747.png"
-              alt="Profile Image"
-              width="450"
-              height="350"
-            />
-          </div>
-          <div class="about-wrapper__info">
-            <p class="about-wrapper__info-text">
-              I love developing websites and apps and I am eager to share my skills with others. I also have a strong passion for aviation
-              and I have made many projects surrounding aviation.
-            </p>
-            <p class="about-wrapper__info-text">
-              I do much more than just Web Development, I am currently learning C#
-              to develop  vatSys plugins. 
-              Some of the languages/tools I love are below :)
-            </p>
-            <span class="about-wrapper__cta">
-              <br>
-              <a href="https://www.w3schools.com/html/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fab fa-html5"></i> HTML</a>
-              <a href="https://www.w3schools.com/css/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fab fa-css3-alt"></i> CSS</a>
-              <a href="https://www.w3schools.com/js/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fab fa-js"></i> JavaScript</a>
-              <a href="https://nodejs.org/en" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fab fa-node-js"></i> Node</a>
-              <a href="https://www.python.org/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fab fa-python"></i> Python</a>
-              <a href="https://www.java.com/en/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fa-brands fa-java"></i> Java</a>
-              <a href="https://www.docker.com/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fa-brands fa-docker"></i> Docker</a>
-              <a href="https://react.dev/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fa-brands fa-react"></i> React</a>
-              <a href="https://git-scm.com/" target="_blank" class="cta-btn cta-btn--resume" style="cursor: default;width: 150px;text-align: center;"><i class="fa-brands fa-git-alt"></i> Git</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /END About Section -->
+      if (isNaN(time) || isNaN(wage) || time <= 0 || wage <= 0) {
+        document.getElementById('result').innerText = "Please enter valid numbers.";
+        return;
+      }
 
-    <!--Projects Section-->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text"><u>Projects</u></h2>
+      if (type === 'percentage') {
+        const customers = parseFloat(document.getElementById('customers').value);
+        if (isNaN(customers) || customers < 0) {
+          document.getElementById('result').innerText = "Please enter valid customer count.";
+          return;
+        }
 
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">vatGates</h3>
-              <p class="project-wrapper__text-info">                
-                vatGates helps VATSIM pilots find suitable spawn gates based on aircraft type and airport, offering filtered results and a sleek, user-friendly interface.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="vatGates/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-                >
-              </div>
-            </div>
+        const percentageWorked = (customers / (time * time * wage)) * 100;
+        document.getElementById('result').innerText = `Percentage Worked: ${percentageWorked.toFixed(2)}%`;
 
-            <div class="project-wrapper__image">
-              <a href="vatGates/" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/vatGates.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
+      } else if (type === 'customersPerHour') {
+        const targetPercentage = parseFloat(document.getElementById('targetPercentage').value);
+        if (isNaN(targetPercentage) || targetPercentage < 0) {
+          document.getElementById('result').innerText = "Please enter a valid percentage.";
+          return;
+        }
 
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">vatStats</h3>
-              <p class="project-wrapper__text-info">
-                Displays VATSIM stats.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="vatStats/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                <a href="vatStats/" target="_blank" class="cta-btn text-color-main"
-                  >See Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-                >
-              </div>
-            </div>
+        const customersPerHour = (targetPercentage * time * wage) / 100;
+        document.getElementById('result').innerText = `Required Customers per Hour: ${customersPerHour.toFixed(2)}`;
+      }
+    }
 
-            <div class="project-wrapper__image">
-              <a href="vatStats/" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/vatStats.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
+    // Initialize the form on first load
+    updateForm();
+  </script>
 
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Vatsim Tools</h3>
-              <p class="project-wrapper__text-info">
-                
-                A wide variety of tools and utilities for the VATSIM network.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="vatsimtools/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >Open <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="vatsimtools/" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/vatsimtools.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">London Tab</h3>
-              <p class="project-wrapper__text-info">
-                A Chrome Extension featuring a video of London.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://chromewebstore.google.com/detail/london-tab/flooeobpjapgokfbcmdakigcpbnanpie"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >Download Extension <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="https://chromewebstore.google.com/detail/london-tab/flooeobpjapgokfbcmdakigcpbnanpie" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/londontab.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">VATSIM Flight Plan Viewer</h3>
-              <p class="project-wrapper__text-info">
-                The VATSIM Flight Plan Viewer displays the most recent 50 flight plans submitted by any CID.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="planfetch/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="planfetch/" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/VATSIM Flight Plan Viewer.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">My Portfolio</h3>
-              <p class="project-wrapper__text-info">
-                This portfolio is built using HTML, SCSS, JavaScript, TypeScript, NestJS.
-              </p>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/home.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-        </div>
-      </div>
-    </section>
-    <!-- End Projects Section -->
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">Need help? Want something made? Contact me!</p>
-          <a href="javascript:copyEmail()" class="cta-btn cta-btn--resume">Contact</a>
-        </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a
-            href="https://github.com/KaiSimpson13123/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <hr />
-        <p class="footer__text">
-          &copy; <span id="year"></span> - Made By
-          <a
-            href="https://github.com/KaiSimpson13123/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Kai Simpson</a
-          >. <br />
-          <p><a href="vatsimtools/">VATSIM Tools</a></p>
-          <p><a href="http://admin.kaisimpson.xyz/">Admin Dashboard</a></p>
-        </p>
-      </div>
-    </footer>
-    <!-- END Footer Section -->
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
-    </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
-    <script src="main.ts"></script>
-    <script src="port.js"></script>
-  </body>
+</body>
 </html>

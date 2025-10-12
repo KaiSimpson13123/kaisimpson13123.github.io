@@ -46,5 +46,8 @@
     ],
     "SKRG": [
         { "name": "Cargo 1A", "maxSize": "F" }
-    ]
+    ],
+    "LCLK": [
+        { "name": "Gate 27", "maxSize": "F" }
+    ],
 }
